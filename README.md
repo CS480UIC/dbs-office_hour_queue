@@ -8,7 +8,7 @@
 office_hour_queue
 
 # Author(s)
-Amanuel Odicho
+Amanuel Odicho\n
 Darian Danciu
 
 # Database description
