@@ -13,4 +13,6 @@ Amanuel Odicho
 Darian Danciu
 
 # Database description
-Write the database description and requirements here
+Office Hour Queue DB that will store information about students, TAs, and Professors. 
+
+It is meant to organize different entities in separate tables.
