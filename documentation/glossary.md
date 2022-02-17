@@ -1,3 +1,5 @@
+### student
+
 |             | Formal Name | Informal Name |
 | ----------- | ----------- | ------------- |
 | Entity       | student       | Student         |
@@ -22,16 +24,7 @@ Synonyms: undergraduate, scholar
 
 Description: A person studying at a school or college
 
-Relationship maxima: 
-
-Relationship minima:
-
-Attribute maxima:
-
-Attribute minima:
-
-Cardinality:
-
+### queue
 
 |             | Formal Name | Informal Name |
 | ----------- | ----------- | ------------- |
@@ -54,16 +47,7 @@ Synonyms: line, row
 
 Description: A sequence of people waiting for turn to be attended to.
 
-Relationship maxima: 
-
-Relationship minima:
-
-Attribute maxima:
-
-Attribute minima:
-
-Cardinality:
-
+### office_hour
 
 |             | Formal Name | Informal Name |
 | ----------- | ----------- | ------------- |
@@ -87,15 +71,8 @@ Synonyms: tutoring
 
 Description: Time dedicatied by a teacher assistant with class work.
 
-Relationship maxima: 
+### course
 
-Relationship minima:
-
-Attribute maxima:
-
-Attribute minima:
-
-Cardinality:
 
 |             | Formal Name | Informal Name |
 | ----------- | ----------- | ------------- |
@@ -119,15 +96,7 @@ Synonyms: subject, lecture
 
 Description: A specific curriculum taught by a professor.
 
-Relationship maxima: 
-
-Relationship minima:
-
-Attribute maxima:
-
-Attribute minima:
-
-Cardinality:
+### Login
 
 |             | Formal Name | Informal Name |
 | ----------- | ----------- | ------------- |
@@ -150,13 +119,3 @@ Entity Name: Student
 Synonyms: sign-in, logon
 
 Description: Logging into a system/account
-
-Relationship maxima: 
-
-Relationship minima:
-
-Attribute maxima:
-
-Attribute minima:
-
-Cardinality:
