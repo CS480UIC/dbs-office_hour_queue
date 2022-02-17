@@ -40,9 +40,7 @@ Cardinality:
 | Attribute      | full_name        | Student Name          |
 | Attribute | follow_up       | Follow up notes         |
 
-<<<<<<< HEAD
 Entity Name: queue
-=======
 
 | queue |
 | ----------- |
@@ -51,7 +49,6 @@ Entity Name: queue
 | follow_up     1-M (0)  |
 
 Entity Name: Student
->>>>>>> 57ab6a9127ed5fe755891ec68f71a6e37b9081cf
 
 Synonyms: line, row
 
@@ -108,9 +105,7 @@ Cardinality:
 | Attribute    | teaching_assistant   | Teaching Assistant  |
 | Attribute    | professor       | Professor         |
 
-<<<<<<< HEAD
 Entity Name: course
-=======
 | course |
 | ----------- |
 | course_number 1-1 (1)  |
@@ -119,7 +114,6 @@ Entity Name: course
 
 
 Entity Name: Student
->>>>>>> 57ab6a9127ed5fe755891ec68f71a6e37b9081cf
 
 Synonyms: subject, lecture
 
@@ -142,9 +136,7 @@ Cardinality:
 | Attribute    | username    | Username      |
 | Attribute    | password    | Paassword     |
 
-<<<<<<< HEAD
 Entity Name: login
-=======
 
 | login |
 | -------------------- |
@@ -154,7 +146,6 @@ Entity Name: login
 
 
 Entity Name: Student
->>>>>>> 57ab6a9127ed5fe755891ec68f71a6e37b9081cf
 
 Synonyms: sign-in, logon
 
