@@ -5,6 +5,9 @@
 | Attribute       | Text        | Text          |
 | Attribute      | Text        | Text          |
 | Attribute | Title       | Title         |
+
+|             | Formal Name | Informal Name |
+| ----------- | ----------- | ------------- |
 | Entity       | Title       | Title         |
 | Relationship     | Text        | Text          |
 | Attribute       | Text        | Text          |
