@@ -7,6 +7,11 @@
 | Attribute | ta_list       | Teaching Assistant List         |
 | Attribute | is_ta       | Is TA        |
 
+|             | Formal Name | Informal Name |
+| ----------- | ----------- | ------------- |
+| Entity       | student       | Student         |
+
+
 Entity Name: Student
 
 Synonyms: undergraduate, scholar
