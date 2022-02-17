@@ -1,7 +1,36 @@
-| Syntax      | Description |
-| ----------- | ----------- |
-| Login       | Title       |
-| Student     | Text        |
-| Queue       | Text        |
-| Course      | Text        |
-| Office_hour | Title       |
+|             | Formal Name | Informal Name |
+| ----------- | ----------- | ------------- |
+| Entity       | Title       | Title         |
+| Relationship     | Text        | Text          |
+| Attribute       | Text        | Text          |
+| Attribute      | Text        | Text          |
+| Attribute | Title       | Title         |
+| Entity       | Title       | Title         |
+| Relationship     | Text        | Text          |
+| Attribute       | Text        | Text          |
+| Attribute      | Text        | Text          |
+| Attribute | Title       | Title         |
+| Entity       | Title       | Title         |
+| Relationship     | Text        | Text          |
+| Attribute       | Text        | Text          |
+| Attribute      | Text        | Text          |
+| Attribute | Title       | Title         |
+| Entity       | Title       | Title         |
+| Relationship     | Text        | Text          |
+| Attribute       | Text        | Text          |
+| Attribute      | Text        | Text          |
+| Attribute | Title       | Title         |
+| Entity       | Title       | Title         |
+| Relationship     | Text        | Text          |
+| Attribute       | Text        | Text          |
+| Attribute      | Text        | Text          |
+| Attribute | Title       | Title         |
+| Attribute | Title       | Title         |
+| Attribute | Title       | Title         |
+| Entity       | Title       | Title         |
+| Relationship     | Text        | Text          |
+| Attribute       | Text        | Text          |
+| Attribute      | Text        | Text          |
+| Attribute | Title       | Title         |
+| Attribute | Title       | Title         |
+| Attribute | Title       | Title         |
