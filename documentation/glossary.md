@@ -134,6 +134,14 @@ Cardinality:
 | Attribute    | username    | Username      |
 | Attribute    | password    | Paassword     |
 
+
+| login |
+| -------------------- |
+| email        1-1 (1) |
+| username     1-1 (1) |
+| password     1-1 (1) |
+
+
 Entity Name: Student
 
 Synonyms: undergraduate, scholar
