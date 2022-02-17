@@ -7,6 +7,15 @@
 | Attribute | ta_list       | Teaching Assistant List         |
 | Attribute | is_ta       | Is TA        |
 
+| student |
+| ----------- |
+| student_email 1-1 (1)  |
+| full_name     M-1 (1) |
+| note     1-1 (0)  |
+| ta_list     M-M (0) |
+| is_ta     M-1 (0) |
+
+
 Entity Name: Student
 
 Synonyms: undergraduate, scholar
@@ -31,7 +40,18 @@ Cardinality:
 | Attribute      | full_name        | Student Name          |
 | Attribute | follow_up       | Follow up notes         |
 
+<<<<<<< HEAD
 Entity Name: queue
+=======
+
+| queue |
+| ----------- |
+| student_email 1-M (1)  |
+| full_name     M-M (1) |
+| follow_up     1-M (0)  |
+
+Entity Name: Student
+>>>>>>> 57ab6a9127ed5fe755891ec68f71a6e37b9081cf
 
 Synonyms: line, row
 
@@ -57,6 +77,12 @@ Cardinality:
 | Attribute |  meetup_time   |  Meeting Time  |
 | Attribute |  meetup_date   |  Meeting Date   |
 
+| office_hour |
+| ----------- |
+| course_number 1-1 (1)  |
+| ta_email     1-M (1) |
+| meetup_time     1-1 (1)  |
+| meetup_date     1-1 (1)  |
 
 Entity Name: office_hour
 
@@ -82,7 +108,18 @@ Cardinality:
 | Attribute    | teaching_assistant   | Teaching Assistant  |
 | Attribute    | professor       | Professor         |
 
+<<<<<<< HEAD
 Entity Name: course
+=======
+| course |
+| ----------- |
+| course_number 1-1 (1)  |
+| teaching_assistant     1-M (1) |
+| professor     1-1 (1)  |
+
+
+Entity Name: Student
+>>>>>>> 57ab6a9127ed5fe755891ec68f71a6e37b9081cf
 
 Synonyms: subject, lecture
 
@@ -105,7 +142,19 @@ Cardinality:
 | Attribute    | username    | Username      |
 | Attribute    | password    | Paassword     |
 
+<<<<<<< HEAD
 Entity Name: login
+=======
+
+| login |
+| -------------------- |
+| email        1-1 (1) |
+| username     1-1 (1) |
+| password     1-1 (1) |
+
+
+Entity Name: Student
+>>>>>>> 57ab6a9127ed5fe755891ec68f71a6e37b9081cf
 
 Synonyms: sign-in, logon
 
