@@ -17,8 +17,7 @@
 | ta_list     M-M (0) |
 | is_ta     M-1 (0) |
 
-
-Entity Name: Student
+Entity Name: student
 
 Synonyms: undergraduate, scholar
 
@@ -33,15 +32,13 @@ Description: A person studying at a school or college
 | Attribute      | full_name        | Student Name          |
 | Attribute | follow_up       | Follow up notes         |
 
-Entity Name: queue
-
 | queue |
 | ----------- |
 | student_email 1-M (1)  |
 | full_name     M-M (1) |
 | follow_up     1-M (0)  |
 
-Entity Name: Student
+Entity Name: queue
 
 Synonyms: line, row
 
@@ -82,15 +79,13 @@ Description: Time dedicatied by a teacher assistant with class work.
 | Attribute    | teaching_assistant   | Teaching Assistant  |
 | Attribute    | professor       | Professor         |
 
-Entity Name: course
 | course |
 | ----------- |
 | course_number 1-1 (1)  |
 | teaching_assistant     1-M (1) |
 | professor     1-1 (1)  |
 
-
-Entity Name: Student
+Entity Name: course
 
 Synonyms: subject, lecture
 
@@ -105,8 +100,6 @@ Description: A specific curriculum taught by a professor.
 | Attribute    | username    | Username      |
 | Attribute    | password    | Paassword     |
 
-Entity Name: login
-
 | login |
 | -------------------- |
 | email        1-1 (1) |
@@ -114,7 +107,7 @@ Entity Name: login
 | password     1-1 (1) |
 
 
-Entity Name: Student
+Entity Name: login
 
 Synonyms: sign-in, logon
 
