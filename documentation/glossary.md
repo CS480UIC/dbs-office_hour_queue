@@ -31,11 +31,11 @@ Cardinality:
 | Attribute      | full_name        | Student Name          |
 | Attribute | follow_up       | Follow up notes         |
 
-Entity Name: Student
+Entity Name: queue
 
-Synonyms: undergraduate, scholar
+Synonyms: line, row
 
-Description: A person studying at a school or college
+Description: A sequence of people waiting for turn to be attended to.
 
 Relationship maxima: 
 
@@ -58,11 +58,11 @@ Cardinality:
 | Attribute |  meetup_date   |  Meeting Date   |
 
 
-Entity Name: Student
+Entity Name: office_hour
 
-Synonyms: undergraduate, scholar
+Synonyms: tutoring
 
-Description: A person studying at a school or college
+Description: Time dedicatied by a teacher assistant with class work.
 
 Relationship maxima: 
 
@@ -82,11 +82,11 @@ Cardinality:
 | Attribute    | teaching_assistant   | Teaching Assistant  |
 | Attribute    | professor       | Professor         |
 
-Entity Name: Student
+Entity Name: course
 
-Synonyms: undergraduate, scholar
+Synonyms: subject, lecture
 
-Description: A person studying at a school or college
+Description: A specific curriculum taught by a professor.
 
 Relationship maxima: 
 
@@ -105,11 +105,11 @@ Cardinality:
 | Attribute    | username    | Username      |
 | Attribute    | password    | Paassword     |
 
-Entity Name: Student
+Entity Name: login
 
-Synonyms: undergraduate, scholar
+Synonyms: sign-in, logon
 
-Description: A person studying at a school or college
+Description: Logging into a system/account
 
 Relationship maxima: 
 
