@@ -7,9 +7,13 @@
 | Attribute | ta_list       | Teaching Assistant List         |
 | Attribute | is_ta       | Is TA        |
 
-|             | Formal Name | Informal Name |
-| ----------- | ----------- | ------------- |
-| Entity       | student       | Student         |
+| student |
+| ----------- |
+| student_email 1 - 1  |
+| full_name     M - 1  |
+| note     1 - 1  |
+| ta_list     M - M  |
+| is_ta     M - 1  |
 
 
 Entity Name: Student
