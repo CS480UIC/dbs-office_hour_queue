@@ -40,6 +40,13 @@ Cardinality:
 | Attribute      | full_name        | Student Name          |
 | Attribute | follow_up       | Follow up notes         |
 
+
+| queue |
+| ----------- |
+| student_email 1-1 (1)  |
+| full_name     M-1 (1) |
+| follow_up     1-1 (0)  |
+
 Entity Name: Student
 
 Synonyms: undergraduate, scholar
