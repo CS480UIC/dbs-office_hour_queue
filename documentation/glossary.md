@@ -43,9 +43,9 @@ Cardinality:
 
 | queue |
 | ----------- |
-| student_email 1-1 (1)  |
-| full_name     M-1 (1) |
-| follow_up     1-1 (0)  |
+| student_email 1-M (1)  |
+| full_name     M-M (1) |
+| follow_up     1-M (0)  |
 
 Entity Name: Student
 
@@ -73,6 +73,12 @@ Cardinality:
 | Attribute |  meetup_time   |  Meeting Time  |
 | Attribute |  meetup_date   |  Meeting Date   |
 
+| office_hour |
+| ----------- |
+| course_number 1-1 (1)  |
+| ta_email     1-M (1) |
+| meetup_time     1-1 (1)  |
+| meetup_date     1-1 (1)  |
 
 Entity Name: Student
 
@@ -97,6 +103,13 @@ Cardinality:
 | Attribute    | course_number        | Course Number       |
 | Attribute    | teaching_assistant   | Teaching Assistant  |
 | Attribute    | professor       | Professor         |
+
+| course |
+| ----------- |
+| course_number 1-1 (1)  |
+| teaching_assistant     1-M (1) |
+| professor     1-1 (1)  |
+
 
 Entity Name: Student
 
