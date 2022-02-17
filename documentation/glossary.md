@@ -10,11 +10,10 @@
 
 |             | Formal Name | Informal Name |
 | ----------- | ----------- | ------------- |
-| Entity       | Title       | Title         |
-| Relationship     | Text        | Text          |
-| Attribute       | Text        | Text          |
-| Attribute      | Text        | Text          |
-| Attribute | Title       | Title         |
+| Entity       | queue       | Queue         |
+| Attribute       | student_email        | Student Email          |
+| Attribute      | full_name        | Student Name          |
+| Attribute | follow_up       | Follow up notes         |
 | Entity       | Title       | Title         |
 | Relationship     | Text        | Text          |
 | Attribute       | Text        | Text          |
