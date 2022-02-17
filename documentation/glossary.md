@@ -9,11 +9,11 @@
 
 | student |
 | ----------- |
-| student_email 1 - 1  |
-| full_name     M - 1  |
-| note     1 - 1  |
-| ta_list     M - M  |
-| is_ta     M - 1  |
+| student_email 1-1 (1)  |
+| full_name     M-1 (1) |
+| note     1-1 (0)  |
+| ta_list     M-M (0) |
+| is_ta     M-1 (0) |
 
 
 Entity Name: Student
