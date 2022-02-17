@@ -14,27 +14,30 @@
 | Attribute       | student_email        | Student Email          |
 | Attribute      | full_name        | Student Name          |
 | Attribute | follow_up       | Follow up notes         |
-| Entity       | Title       | Title         |
-| Relationship     | Text        | Text          |
-| Attribute       | Text        | Text          |
-| Attribute      | Text        | Text          |
-| Attribute | Title       | Title         |
-| Entity       | Title       | Title         |
-| Relationship     | Text        | Text          |
-| Attribute       | Text        | Text          |
-| Attribute      | Text        | Text          |
-| Attribute | Title       | Title         |
-| Entity       | Title       | Title         |
-| Relationship     | Text        | Text          |
-| Attribute       | Text        | Text          |
-| Attribute      | Text        | Text          |
-| Attribute | Title       | Title         |
-| Attribute | Title       | Title         |
-| Attribute | Title       | Title         |
-| Entity       | Title       | Title         |
-| Relationship     | Text        | Text          |
-| Attribute       | Text        | Text          |
-| Attribute      | Text        | Text          |
-| Attribute | Title       | Title         |
-| Attribute | Title       | Title         |
-| Attribute | Title       | Title         |
+
+
+|             | Formal Name | Informal Name |
+| ----------- | ----------- | ------------- |
+| Entity   | office_hour     | Office Hour |
+| Relationship   | office_hour-hosts-queue  | Office Hour Hosts Queue          |
+| Attribute |  course_number |  Course Number   |
+| Attribute |  ta_email      |  Teaching Assistant Email   |
+| Attribute |  meetup_time   |  Meeting Time  |
+| Attribute |  meetup_date   |  Meeting Date   |
+
+
+|             | Formal Name | Informal Name |
+| ----------- | ----------- | ------------- |
+| Entity       | course         | Course        |
+| Relationship | course-creates-office_hour | Course Number |
+| Attribute    | course_number        | Course Number       |
+| Attribute    | teaching_assistant   | Teaching Assistant  |
+| Attribute    | professor       | Professor         |
+
+
+|             | Formal Name | Informal Name |
+| ----------- | ----------- | ------------- |
+| Entity       | login       | Login         |
+| Attribute    | email       | Email         |
+| Attribute    | username    | Username      |
+| Attribute    | password    | Paassword     |
