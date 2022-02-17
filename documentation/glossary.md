@@ -1,4 +1,4 @@
-### student
+# ----- student -----
 
 |             | Formal Name | Informal Name |
 | ----------- | ----------- | ------------- |
@@ -24,7 +24,7 @@ Synonyms: undergraduate, scholar
 
 Description: A person studying at a school or college
 
-### queue
+# ----- queue -----
 
 |             | Formal Name | Informal Name |
 | ----------- | ----------- | ------------- |
@@ -47,7 +47,7 @@ Synonyms: line, row
 
 Description: A sequence of people waiting for turn to be attended to.
 
-### office_hour
+# ----- office_hour -----
 
 |             | Formal Name | Informal Name |
 | ----------- | ----------- | ------------- |
@@ -71,7 +71,7 @@ Synonyms: tutoring
 
 Description: Time dedicatied by a teacher assistant with class work.
 
-### course
+# ----- course -----
 
 
 |             | Formal Name | Informal Name |
@@ -96,7 +96,7 @@ Synonyms: subject, lecture
 
 Description: A specific curriculum taught by a professor.
 
-### Login
+# ----- Login -----
 
 |             | Formal Name | Informal Name |
 | ----------- | ----------- | ------------- |
