@@ -13,6 +13,10 @@ Amanuel Odicho
 Darian Danciu
 
 # Database description
-Office Hour Queue DB that will store information about students, TAs, and Professors. 
+Office Hour Queue DB that will store information about courses, office hours, students, TAs, and Professors. 
 
-It is meant to organize different entities in separate tables.
+In total there are 5 entities in our database.
+
+The entities are designed such that fetching and writing data is seamless during implementation in the backend.
+
+
