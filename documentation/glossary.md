@@ -7,6 +7,15 @@
 | Attribute | ta_list       | Teaching Assistant List         |
 | Attribute | is_ta       | Is TA        |
 
+| student |
+| ----------- |
+| student_email 1-1 (1)  |
+| full_name     M-1 (1) |
+| note     1-1 (0)  |
+| ta_list     M-M (0) |
+| is_ta     M-1 (0) |
+
+
 Entity Name: Student
 
 Synonyms: undergraduate, scholar
@@ -30,6 +39,13 @@ Cardinality:
 | Attribute       | student_email        | Student Email          |
 | Attribute      | full_name        | Student Name          |
 | Attribute | follow_up       | Follow up notes         |
+
+
+| queue |
+| ----------- |
+| student_email 1-M (1)  |
+| full_name     M-M (1) |
+| follow_up     1-M (0)  |
 
 Entity Name: Student
 
@@ -57,6 +73,12 @@ Cardinality:
 | Attribute |  meetup_time   |  Meeting Time  |
 | Attribute |  meetup_date   |  Meeting Date   |
 
+| office_hour |
+| ----------- |
+| course_number 1-1 (1)  |
+| ta_email     1-M (1) |
+| meetup_time     1-1 (1)  |
+| meetup_date     1-1 (1)  |
 
 Entity Name: Student
 
@@ -81,6 +103,13 @@ Cardinality:
 | Attribute    | course_number        | Course Number       |
 | Attribute    | teaching_assistant   | Teaching Assistant  |
 | Attribute    | professor       | Professor         |
+
+| course |
+| ----------- |
+| course_number 1-1 (1)  |
+| teaching_assistant     1-M (1) |
+| professor     1-1 (1)  |
+
 
 Entity Name: Student
 
