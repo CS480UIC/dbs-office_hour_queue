@@ -7,6 +7,22 @@
 | Attribute | ta_list       | Teaching Assistant List         |
 | Attribute | is_ta       | Is TA        |
 
+Entity Name: Student
+
+Synonyms: undergraduate, scholar
+
+Description: A person studying at a school or college
+
+Relationship maxima: 
+
+Relationship minima:
+
+Attribute maxima:
+
+Attribute minima:
+
+Cardinality:
+
 
 |             | Formal Name | Informal Name |
 | ----------- | ----------- | ------------- |
@@ -14,6 +30,22 @@
 | Attribute       | student_email        | Student Email          |
 | Attribute      | full_name        | Student Name          |
 | Attribute | follow_up       | Follow up notes         |
+
+Entity Name: Student
+
+Synonyms: undergraduate, scholar
+
+Description: A person studying at a school or college
+
+Relationship maxima: 
+
+Relationship minima:
+
+Attribute maxima:
+
+Attribute minima:
+
+Cardinality:
 
 
 |             | Formal Name | Informal Name |
@@ -26,6 +58,22 @@
 | Attribute |  meetup_date   |  Meeting Date   |
 
 
+Entity Name: Student
+
+Synonyms: undergraduate, scholar
+
+Description: A person studying at a school or college
+
+Relationship maxima: 
+
+Relationship minima:
+
+Attribute maxima:
+
+Attribute minima:
+
+Cardinality:
+
 |             | Formal Name | Informal Name |
 | ----------- | ----------- | ------------- |
 | Entity       | course         | Course        |
@@ -34,6 +82,21 @@
 | Attribute    | teaching_assistant   | Teaching Assistant  |
 | Attribute    | professor       | Professor         |
 
+Entity Name: Student
+
+Synonyms: undergraduate, scholar
+
+Description: A person studying at a school or college
+
+Relationship maxima: 
+
+Relationship minima:
+
+Attribute maxima:
+
+Attribute minima:
+
+Cardinality:
 
 |             | Formal Name | Informal Name |
 | ----------- | ----------- | ------------- |
@@ -41,3 +104,19 @@
 | Attribute    | email       | Email         |
 | Attribute    | username    | Username      |
 | Attribute    | password    | Paassword     |
+
+Entity Name: Student
+
+Synonyms: undergraduate, scholar
+
+Description: A person studying at a school or college
+
+Relationship maxima: 
+
+Relationship minima:
+
+Attribute maxima:
+
+Attribute minima:
+
+Cardinality:
