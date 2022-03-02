@@ -122,6 +122,7 @@ Description: Logging into a system/account
 
 # PD5
 Independent Entities: student, course
+
 Dependent Entities: login, ta_list, queue, office_hour
 
 Foreign Key constraint: You cannot create a login for a student that doesn't exist. You cannot create an office hour for a course that doesn't exist. You cannot create a queue for an office hour that doesn't exist.
