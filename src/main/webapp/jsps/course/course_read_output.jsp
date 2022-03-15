@@ -24,13 +24,13 @@
   <h1>Read course Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	course_number:<input type="text" name="ta_email" value="${course.course_number }" disabled/>
+	course_number:<input type="text" name="course_number" value="${course.course_number }" disabled/>
 	<br/>
 	
-	teaching_assistant：<input type="text" name="ta_course_number" value="${course.teaching_assistant }" disabled />
+	teaching_assistant：<input type="text" name="teaching_assistant" value="${course.teaching_assistant }" disabled />
 	<br/>
 	
-	professor	：<input type="text" name="ta_course_department" value="${course.professor }" disabled/>
+	professor	：<input type="text" name="professor" value="${course.professor }" disabled/>
 	<br/>
 </form>
 

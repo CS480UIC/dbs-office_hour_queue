@@ -24,13 +24,13 @@
   <h1>Create course</h1>
   
 <form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	course_number: <input type="text" name="ta_email" value="${form.course_number }"/>
+	course_number: <input type="text" name="course_number" value="${form.course_number }"/>
 	<span style="color: red; font-weight: 900">${errors.course_number }</span>
 	<br/>
-	teaching_assistant： <input type="text" name="ta_course_number" value="${form.teaching_assistant }"/>
+	teaching_assistant： <input type="text" name="teaching_assistant" value="${form.teaching_assistant }"/>
 	<span style="color: red; font-weight: 900">${errors.teaching_assistant }</span>
 	<br/>
-	professor： <input type="text" name="ta_course_department" value="${form.professor }"/>
+	professor： <input type="text" name="professor" value="${form.professor }"/>
 	<span style="color: red; font-weight: 900">${errors.professor }</span>
 	<br/>
 	

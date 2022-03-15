@@ -22,12 +22,12 @@
   </head>
   
   <body>
-    <h1>CRUD operations for course</h1>
+    <h1>CRUD operations for queue</h1>
     <br>
-	<a href="<c:url value='/jsps/course/course_create.jsp'/>" target="_parent">Create course</a> |&nbsp; 
-	<a href="<c:url value='/jsps/course/course_read.jsp'/>" target="_parent">Read course</a> |&nbsp;
-	<a href="<c:url value='/jsps/course/course_update.jsp'/>" target="_parent">Update course</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/course/course_delete.jsp'/>" target="_parent">Delete course</a>	
+	<a href="<c:url value='/jsps/queue/queue_create.jsp'/>" target="_parent">Create queue</a> |&nbsp; 
+	<a href="<c:url value='/jsps/queue/queue_read.jsp'/>" target="_parent">Read queue</a> |&nbsp;
+	<a href="<c:url value='/jsps/queue/queue_update.jsp'/>" target="_parent">Update queue</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/queue/queue_delete.jsp'/>" target="_parent">Delete queue</a>	
 	    
   </body>
 </html>

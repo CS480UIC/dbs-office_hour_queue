@@ -36,12 +36,12 @@
 <h1>Update the values below</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${course.course_number }"/>
-	teaching_assistant：<input type="password" name="password" value="${form.teaching_assistant }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+				<input type="hidden" name="course_number" value="${course.course_number }"/>
+	teaching_assistant：<input type="password" name="teaching_assistant " value="${form.teaching_assistant }"/>
+	<span style="color: red; font-weight: 900">${errors.teaching_assistant }</span>
 	<br/>
-	professor	：<input type="text" name="email" value="${form.professo }"/>
-	<span style="color: red; font-weight: 900">${errors.professo }</span>
+	professor	：<input type="text" name="professor" value="${form.professor }"/>
+	<span style="color: red; font-weight: 900">${errors.professor }</span>
 	<br/>
 	<input type="submit" value="Update course"/>
 </form>
