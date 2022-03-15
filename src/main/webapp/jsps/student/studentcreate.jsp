@@ -28,8 +28,7 @@
 	<span style="color: red; font-weight: 900">${errors.student_email }</span>
 	<br/>
 	
-	
-	full_name：<input type="password" name="full_name" value="${form.full_name }"/>
+	full_name：<input type="text" name="full_name" value="${form.full_name }"/>
 	<span style="color: red; font-weight: 900">${errors.full_name }</span>
 	<br/>
 	note	：<input type="text" name="note" value="${form.note }"/>
