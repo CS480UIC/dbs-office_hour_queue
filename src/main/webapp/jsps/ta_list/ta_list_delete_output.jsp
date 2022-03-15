@@ -22,12 +22,27 @@
   
   <body>
   <h1>Delete Student</h1>
+<p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/Entity1ServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Delete Student with student_email   :<input type="text" name="student_email" value="${form.student_email }"/>
-	<span style="color: red; font-weight: 900">${errors.student_email }</span>
+	<input type="hidden" name="method" value="delete"/>
+		<input type="hidden" name="username" value="${entity1.student_email }"/>
+	student_email:<input type="text" name="student_email" value="${entity1.student_email }" disabled/>
 	<br/>
+	
+	full_name：<input type="text" name="full_name" value="${entity1.full_name }" disabled />
+	<br/>
+	
+	note	：<input type="text" name="note" value="${entity1.note }" disabled/>
+	<br/>
+	
+	is_ta	：<input type="text" name="is_ta" value="${entity1.is_ta }" disabled/>
+	<br/>
+	
+	queueID	：<input type="text" name="queueID" value="${entity1.queueID }" disabled/>
+	<br/>
+	
 	<input type="submit" value="Delete Student"/>
 </form>
-  </body>
+
+</body>
 </html>

@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Student</title>
+    <title>Read Student Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,28 +21,25 @@
   </head>
   
   <body>
-  <h1>Delete Student</h1>
+  <h1>Read Student Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${student.student_email }"/>
-	student_email:<input type="text" name="student_email" value="${student.student_email }" disabled/>
+<form>
+	student_email:<input type="text" name="student_email" value="${entity1.student_email }" disabled/>
 	<br/>
 	
-	full_name：<input type="text" name="full_name" value="${student.full_name }" disabled />
+	full_name：<input type="text" name="full_name" value="${entity1.full_name }" disabled />
 	<br/>
 	
-	note	：<input type="text" name="note" value="${student.note }" disabled/>
+	note	：<input type="text" name="note" value="${entity1.note }" disabled/>
 	<br/>
 	
-	is_ta	：<input type="text" name="is_ta" value="${student.is_ta }" disabled/>
+	is_ta	：<input type="text" name="is_ta" value="${entity1.is_ta }" disabled/>
 	<br/>
 	
-	queueID	：<input type="text" name="queueID" value="${student.queueID }" disabled/>
+	queueID	：<input type="text" name="queueID" value="${entity1.queueID }" disabled/>
 	<br/>
-	
-	<input type="submit" value="Delete Student"/>
 </form>
 
+<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
 </body>
 </html>

@@ -45,6 +45,11 @@
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
 			<a href="<c:url value='/jsps/entity1/menu.jsp'/>" target="body">CRUD entity 1</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/student/menu.jsp'/>" target="body">CRUD student</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/ta_list/menu.jsp'/>" target="body">CRUD ta_list</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/student/menu.jsp'/>" target="body">CRUD course_student</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/student/menu.jsp'/>" target="body">CRUD course</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/student/menu.jsp'/>" target="body">CRUD queue</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/student/menu.jsp'/>" target="body">CRUD office_hour</a> |&nbsp;&nbsp;
 
 		</c:otherwise>
 	</c:choose>

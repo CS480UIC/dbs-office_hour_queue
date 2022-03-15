@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Student</title>
+    <title>Read ta_list</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,36 +21,20 @@
   </head>
   
   <body>
-  <h1>Update Student</h1>
+  <h1>Read ta_list</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form>
-	student_email:<input type="text" name="student_email" value="${student.student_email }" disabled/>
+<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+	<input type="hidden" name="method" value="regist"/>
+	ta_email    :<input type="text" name="ta_email" value="${form.ta_email }"/>
+	<span style="color: red; font-weight: 900">${errors.ta_email }</span>
 	<br/>
-	
-	full_name：<input type="text" name="full_name" value="${student.full_name }" disabled />
-	<br/>
-	
-	note	：<input type="text" name="note" value="${student.note }" disabled/>
-	<br/>
-	
-	is_ta	：<input type="text" name="is_ta" value="${student.is_ta }" disabled/>
-	<br/>
-	
-	queueID	：<input type="text" name="queueID" value="${student.queueID }" disabled/>
-	<br/>
-</form>
-<h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
-		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${student.username }"/>
-	Password：<input type="password" name="password" value="${form.password }"/>
+<%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
 	<br/>
 	Email	：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	<input type="submit" value="Update Student"/>
+	<br/> --%>
+	<input type="submit" value="Read ta_list"/>
 </form>
-
-</body>
+  </body>
 </html>

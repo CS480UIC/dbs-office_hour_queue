@@ -5,8 +5,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
+    <base href="">
     
-    <title>Delete Student</title>
+    <title>body</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +22,12 @@
   </head>
   
   <body>
-  <h1>Delete Student</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Delete Student with student_email   :<input type="text" name="student_email" value="${form.student_email }"/>
-	<span style="color: red; font-weight: 900">${errors.student_email }</span>
-	<br/>
-	<input type="submit" value="Delete Student"/>
-</form>
+    <h1>CRUD operations for ta_list </h1>
+    <br>
+	<a href="<c:url value='/jsps/ta_list/ta_listcreate.jsp'/>" target="_parent">Create ta_list</a> |&nbsp; 
+	<a href="<c:url value='/jsps/ta_list/ta_listread.jsp'/>" target="_parent">Read ta_list</a> |&nbsp;
+	<a href="<c:url value='/jsps/ta_list/ta_listupdate.jsp'/>" target="_parent">Update ta_list</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/ta_list/ta_listdelete.jsp'/>" target="_parent">Delete ta_list</a>	
+	    
   </body>
 </html>

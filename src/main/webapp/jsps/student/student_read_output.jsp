@@ -24,19 +24,19 @@
   <h1>Read Student Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	student_email:<input type="text" name="student_email" value="${entity1.student_email }" disabled/>
+	student_email:<input type="text" name="student_email" value="${student.student_email }" disabled/>
 	<br/>
 	
-	full_name：<input type="text" name="full_name" value="${entity1.full_name }" disabled />
+	full_name：<input type="text" name="full_name" value="${student.full_name }" disabled />
 	<br/>
 	
-	note	：<input type="text" name="note" value="${entity1.note }" disabled/>
+	note	：<input type="text" name="note" value="${student.note }" disabled/>
 	<br/>
 	
-	is_ta	：<input type="text" name="is_ta" value="${entity1.is_ta }" disabled/>
+	is_ta	：<input type="text" name="is_ta" value="${student.is_ta }" disabled/>
 	<br/>
 	
-	queueID	：<input type="text" name="queueID" value="${entity1.queueID }" disabled/>
+	queueID	：<input type="text" name="queueID" value="${student.queueID }" disabled/>
 	<br/>
 </form>
 
