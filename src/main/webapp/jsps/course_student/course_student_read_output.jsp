@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read ta_list Output</title>
+    <title>Read course_student Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,17 +21,15 @@
   </head>
   
   <body>
-  <h1>Read ta_list Output</h1>
+  <h1>Read course_student Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	ta_email:<input type="text" name="ta_email" value="${ta_list.ta_email }" disabled/>
+	student_email:<input type="text" name="student_email" value="${course_student.student_email }" disabled/>
 	<br/>
 	
-	ta_course_number：<input type="text" name="ta_course_number" value="${ta_list.ta_course_number }" disabled />
+	course_number：<input type="text" name="course_number" value="${course_student.course_number }" disabled />
 	<br/>
 	
-	ta_course_department	：<input type="text" name="ta_course_department" value="${ta_list.ta_course_department }" disabled/>
-	<br/>
 </form>
 
 <button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>

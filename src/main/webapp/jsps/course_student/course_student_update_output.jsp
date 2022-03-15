@@ -24,19 +24,17 @@
   <h1>Update ta_list</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	ta_email:<input type="text" name="ta_email" value="${ta_list.ta_email }" disabled/>
+	student_email:<input type="text" name="student_email" value="${course_student.student_email }" disabled/>
 	<br/>
 	
-	ta_course_number：<input type="text" name="ta_course_number" value="${ta_list.ta_course_number }" disabled />
+	course_number：<input type="text" name="course_number" value="${course_student.course_number }" disabled />
 	<br/>
-	
-	ta_course_department	：<input type="text" name="ta_course_department" value="${ta_list.ta_course_department }" disabled/>
-	<br/>
+
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${ta_list.username }"/>
+				<input type="hidden" name="username" value="${course_student.username }"/>
 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
 	<br/>

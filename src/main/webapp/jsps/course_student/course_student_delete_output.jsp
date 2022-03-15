@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete ta_list</title>
+    <title>Delete course_student</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,21 +21,18 @@
   </head>
   
   <body>
-  <h1>Delete ta_list</h1>
+  <h1>Delete course_student</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/Entity1ServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="ta_email" value="${ta_list.ta_email }"/>
-	ta_email:<input type="text" name="ta_email" value="${ta_list.ta_email }" disabled/>
+		<input type="hidden" name="ta_email" value="${course_student.ta_email }"/>
+	student_email:<input type="text" name="student_email" value="${course_student.student_email }" disabled/>
 	<br/>
 	
-	ta_course_number：<input type="text" name="ta_course_number" value="${ta_list.ta_course_number }" disabled />
+	course_number：<input type="text" name="course_number" value="${course_student.course_number }" disabled />
 	<br/>
-	
-	ta_course_department	：<input type="text" name="ta_course_department" value="${ta_list.ta_course_department }" disabled/>
-	<br/>
-	
-	<input type="submit" value="Delete ta_list"/>
+		
+	<input type="submit" value="Delete course_student"/>
 </form>
 
 </body>
