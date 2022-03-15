@@ -35,7 +35,7 @@
 	professor	：<input type="text" name="ta_course_department" value="${course.professor }" disabled/>
 	<br/>
 	
-	<input type="submit" value="Delete ta_list"/>
+	<input type="submit" value="Delete course"/>
 </form>
 
 </body>

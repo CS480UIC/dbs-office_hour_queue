@@ -21,13 +21,13 @@
   </head>
   
   <body>
-  <h1>Update ta_list</h1>
+  <h1>Update course</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update ta_list with ta_email  :<input type="text" name="ta_email" value="${form.ta_email }"/>
-	<span style="color: red; font-weight: 900">${errors.ta_email }</span>
+	Update course with course_number  :<input type="text" name="ta_email" value="${form.course_number }"/>
+	<span style="color: red; font-weight: 900">${errors.course_number }</span>
 	<br/>
-	<input type="submit" value="Update ta_list"/>
+	<input type="submit" value="Update course"/>
 </form>
   </body>
 </html>

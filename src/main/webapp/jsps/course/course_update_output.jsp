@@ -21,29 +21,29 @@
   </head>
   
   <body>
-  <h1>Update ta_list</h1>
+  <h1>Update course</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	ta_email:<input type="text" name="ta_email" value="${ta_list.ta_email }" disabled/>
+	course_number: <input type="text" name="ta_email" value="${course.course_number }" disabled/>
 	<br/>
 	
-	ta_course_number：<input type="text" name="ta_course_number" value="${ta_list.ta_course_number }" disabled />
+	teaching_assistant： <input type="text" name="ta_course_number" value="${course.teaching_assistant }" disabled />
 	<br/>
 	
-	ta_course_department	：<input type="text" name="ta_course_department" value="${ta_list.ta_course_department }" disabled/>
+	professor： <input type="text" name="ta_course_department" value="${course.professor }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${ta_list.username }"/>
-	Password：<input type="password" name="password" value="${form.password }"/>
+				<input type="hidden" name="username" value="${course.course_number }"/>
+	teaching_assistant：<input type="password" name="password" value="${form.teaching_assistant }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	professor	：<input type="text" name="email" value="${form.professo }"/>
+	<span style="color: red; font-weight: 900">${errors.professo }</span>
 	<br/>
-	<input type="submit" value="Update ta_list"/>
+	<input type="submit" value="Update course"/>
 </form>
 
 </body>

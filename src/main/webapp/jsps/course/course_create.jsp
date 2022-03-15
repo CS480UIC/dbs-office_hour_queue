@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>ta_list Create</h1>
+  <h1>Create course</h1>
   
 <form action="<c:url value='/Entity1ServletCreate'/>" method="post">
 	course_number: <input type="text" name="ta_email" value="${form.course_number }"/>
@@ -34,7 +34,7 @@
 	<span style="color: red; font-weight: 900">${errors.professor }</span>
 	<br/>
 	
-	<input type="submit" value="Create ta_list"/>
+	<input type="submit" value="Create course"/>
 </form>
   </body>
 </html>
