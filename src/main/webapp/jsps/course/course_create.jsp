@@ -24,14 +24,14 @@
   <h1>ta_list Create</h1>
   
 <form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	ta_email    :<input type="text" name="ta_email" value="${form.ta_email }"/>
-	<span style="color: red; font-weight: 900">${errors.ta_email }</span>
+	course_number: <input type="text" name="ta_email" value="${form.course_number }"/>
+	<span style="color: red; font-weight: 900">${errors.course_number }</span>
 	<br/>
-	ta_course_number：<input type="text" name="ta_course_number" value="${form.ta_course_number }"/>
-	<span style="color: red; font-weight: 900">${errors.ta_course_number }</span>
+	teaching_assistant： <input type="text" name="ta_course_number" value="${form.teaching_assistant }"/>
+	<span style="color: red; font-weight: 900">${errors.teaching_assistant }</span>
 	<br/>
-	ta_course_department	：<input type="text" name="ta_course_department" value="${form.ta_course_department }"/>
-	<span style="color: red; font-weight: 900">${errors.ta_course_department }</span>
+	professor： <input type="text" name="ta_course_department" value="${form.professor }"/>
+	<span style="color: red; font-weight: 900">${errors.professor }</span>
 	<br/>
 	
 	<input type="submit" value="Create ta_list"/>
