@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read ta_list Output</title>
+    <title>course_student Create</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,19 +21,17 @@
   </head>
   
   <body>
-  <h1>Read ta_list Output</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
-<form>
-	ta_email:<input type="text" name="ta_email" value="${ta_list.ta_email }" disabled/>
+  <h1>course_student Create</h1>
+  
+<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+	student_email    :<input type="text" name="student_email" value="${form.student_email }"/>
+	<span style="color: red; font-weight: 900">${errors.student_email }</span>
+	<br/>
+	course_number：<input type="text" name="course_number" value="${form.course_number }"/>
+	<span style="color: red; font-weight: 900">${errors.course_number }</span>
 	<br/>
 	
-	ta_course_number：<input type="text" name="ta_course_number" value="${ta_list.ta_course_number }" disabled />
-	<br/>
-	
-	ta_course_department	：<input type="text" name="ta_course_department" value="${ta_list.ta_course_department }" disabled/>
-	<br/>
+	<input type="submit" value="Create course_student"/>
 </form>
-
-<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
-</body>
+  </body>
 </html>

@@ -5,8 +5,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
+    <base href="">
     
-    <title>Read ta_list Output</title>
+    <title>body</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,19 +22,12 @@
   </head>
   
   <body>
-  <h1>Read ta_list Output</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
-<form>
-	ta_email:<input type="text" name="ta_email" value="${ta_list.ta_email }" disabled/>
-	<br/>
-	
-	ta_course_number：<input type="text" name="ta_course_number" value="${ta_list.ta_course_number }" disabled />
-	<br/>
-	
-	ta_course_department	：<input type="text" name="ta_course_department" value="${ta_list.ta_course_department }" disabled/>
-	<br/>
-</form>
-
-<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
-</body>
+    <h1>CRUD operations for course_student </h1>
+    <br>
+	<a href="<c:url value='/jsps/course_student/course_studentcreate.jsp'/>" target="_parent">Create course_student</a> |&nbsp; 
+	<a href="<c:url value='/jsps/course_student/course_studentread.jsp'/>" target="_parent">Read course_student</a> |&nbsp;
+	<a href="<c:url value='/jsps/course_student/course_studentupdate.jsp'/>" target="_parent">Update course_student</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/course_student/course_studentdelete.jsp'/>" target="_parent">Delete course_student</a>	
+	    
+  </body>
 </html>

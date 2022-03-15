@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read ta_list Output</title>
+    <title>Update ta_list</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,19 +21,13 @@
   </head>
   
   <body>
-  <h1>Read ta_list Output</h1>
-<p style="color: red; font-weight: 900">${msg }</p>
-<form>
-	ta_email:<input type="text" name="ta_email" value="${ta_list.ta_email }" disabled/>
+  <h1>Update ta_list</h1>
+<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+	<input type="hidden" name="method" value="search"/>
+	Update ta_list with ta_email  :<input type="text" name="ta_email" value="${form.ta_email }"/>
+	<span style="color: red; font-weight: 900">${errors.ta_email }</span>
 	<br/>
-	
-	ta_course_number：<input type="text" name="ta_course_number" value="${ta_list.ta_course_number }" disabled />
-	<br/>
-	
-	ta_course_department	：<input type="text" name="ta_course_department" value="${ta_list.ta_course_department }" disabled/>
-	<br/>
+	<input type="submit" value="Update ta_list"/>
 </form>
-
-<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
-</body>
+  </body>
 </html>

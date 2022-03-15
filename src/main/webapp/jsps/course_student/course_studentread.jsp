@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete ta_list</title>
+    <title>Read ta_list</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,22 +21,20 @@
   </head>
   
   <body>
-  <h1>Delete ta_list</h1>
+  <h1>Read ta_list</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="ta_email" value="${ta_list.ta_email }"/>
-	ta_email:<input type="text" name="ta_email" value="${ta_list.ta_email }" disabled/>
+<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+	<input type="hidden" name="method" value="regist"/>
+	ta_email    :<input type="text" name="ta_email" value="${form.ta_email }"/>
+	<span style="color: red; font-weight: 900">${errors.ta_email }</span>
 	<br/>
-	
-	ta_course_number：<input type="text" name="ta_course_number" value="${ta_list.ta_course_number }" disabled />
+<%-- 	Password：<input type="password" name="password" value="${form.password }"/>
+	<span style="color: red; font-weight: 900">${errors.password }</span>
 	<br/>
-	
-	ta_course_department	：<input type="text" name="ta_course_department" value="${ta_list.ta_course_department }" disabled/>
-	<br/>
-	
-	<input type="submit" value="Delete ta_list"/>
+	Email	：<input type="text" name="email" value="${form.email }"/>
+	<span style="color: red; font-weight: 900">${errors.email }</span>
+	<br/> --%>
+	<input type="submit" value="Read ta_list"/>
 </form>
-
-</body>
+  </body>
 </html>
