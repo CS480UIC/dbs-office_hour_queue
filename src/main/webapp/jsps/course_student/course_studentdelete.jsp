@@ -24,9 +24,14 @@
   <h1>Delete course_student</h1>
 <form action="<c:url value='/Entity1ServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete ta_list with ta_email   :<input type="text" name="ta_email" value="${form.ta_email }"/>
-	<span style="color: red; font-weight: 900">${errors.ta_email }</span>
+	Delete course_student with student_email and course_number   :<input type="text" name="student_email" value="${form.student_email }"/>
+	<span style="color: red; font-weight: 900">${errors.student_email }</span>
+	
+	<input type="text" name="student_email" value="${form.course_number }"/>
+	<span style="color: red; font-weight: 900">${errors.course_number }</span>
+	
 	<br/>
+	
 	<input type="submit" value="Delete course_student"/>
 </form>
   </body>

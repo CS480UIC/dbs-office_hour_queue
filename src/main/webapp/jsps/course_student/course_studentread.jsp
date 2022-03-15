@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read ta_list</title>
+    <title>Read course_student</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,12 +21,12 @@
   </head>
   
   <body>
-  <h1>Read ta_list</h1>
+  <h1>Read course_student</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/Entity1ServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	ta_email    :<input type="text" name="ta_email" value="${form.ta_email }"/>
-	<span style="color: red; font-weight: 900">${errors.ta_email }</span>
+	student_email    :<input type="text" name="student_email" value="${form.student_email }"/>
+	<span style="color: red; font-weight: 900">${errors.student_email }</span>
 	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
@@ -34,7 +34,7 @@
 	Email	：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/> --%>
-	<input type="submit" value="Read ta_list"/>
+	<input type="submit" value="Read course_student"/>
 </form>
   </body>
 </html>
