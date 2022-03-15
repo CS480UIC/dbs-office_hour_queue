@@ -21,16 +21,16 @@
   </head>
   
   <body>
-  <h1>Read ta_list Output</h1>
+  <h1>Read course Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	ta_email:<input type="text" name="ta_email" value="${ta_list.ta_email }" disabled/>
+	course_number:<input type="text" name="ta_email" value="${course.course_number }" disabled/>
 	<br/>
 	
-	ta_course_number：<input type="text" name="ta_course_number" value="${ta_list.ta_course_number }" disabled />
+	teaching_assistant：<input type="text" name="ta_course_number" value="${course.teaching_assistant }" disabled />
 	<br/>
 	
-	ta_course_department	：<input type="text" name="ta_course_department" value="${ta_list.ta_course_department }" disabled/>
+	professor	：<input type="text" name="ta_course_department" value="${course.professor }" disabled/>
 	<br/>
 </form>
 
