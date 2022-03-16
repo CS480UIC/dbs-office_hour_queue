@@ -24,10 +24,10 @@
   <body>
     <h1>CRUD operations for office_hour</h1>
     <br>
-	<a href="<c:url value='/jsps/queue/queue_create.jsp'/>" target="_parent">Create office_hour</a> |&nbsp; 
-	<a href="<c:url value='/jsps/queue/queue_read.jsp'/>" target="_parent">Read office_hour</a> |&nbsp;
-	<a href="<c:url value='/jsps/queue/queue_update.jsp'/>" target="_parent">Update office_hour</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/queue/queue_delete.jsp'/>" target="_parent">Delete office_hour</a>	
+	<a href="<c:url value='/jsps/office_hour/office_hour_create.jsp'/>" target="_parent">Create office_hour</a> |&nbsp; 
+	<a href="<c:url value='/jsps/office_hour/office_hour_read.jsp'/>" target="_parent">Read office_hour</a> |&nbsp;
+	<a href="<c:url value='/jsps/office_hour/office_hour_update.jsp'/>" target="_parent">Update office_hour</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/office_hour/office_hour_delete.jsp'/>" target="_parent">Delete office_hour</a>	
 	    
   </body>
 </html>
