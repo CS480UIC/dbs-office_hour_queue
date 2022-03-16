@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update ta_list</title>
+    <title>Update course</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -37,7 +37,7 @@
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
 				<input type="hidden" name="course_number" value="${course.course_number }"/>
-	teaching_assistant：<input type="password" name="teaching_assistant " value="${form.teaching_assistant }"/>
+	teaching_assistant：<input type="text" name="teaching_assistant " value="${form.teaching_assistant }"/>
 	<span style="color: red; font-weight: 900">${errors.teaching_assistant }</span>
 	<br/>
 	professor	：<input type="text" name="professor" value="${form.professor }"/>

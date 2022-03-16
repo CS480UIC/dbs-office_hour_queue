@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update ta_list</title>
+    <title>Update queue</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>Update course</h1>
+  <h1>Update queue</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Update course with course_number  :<input type="text" name="ta_email" value="${form.course_number }"/>

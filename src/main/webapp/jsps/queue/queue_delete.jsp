@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete ta_list</title>
+    <title>Delete queue</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,13 @@
   </head>
   
   <body>
-  <h1>Delete course</h1>
+  <h1>Delete queue</h1>
 <form action="<c:url value='/Entity1ServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete course with course_number   :<input type="text" name="ta_email" value="${form.course_number}"/>
-	<span style="color: red; font-weight: 900">${errors.course_number }</span>
+	Delete queue with id_queue   :<input type="text" name="id_queue" value="${form.id_queue}"/>
+	<span style="color: red; font-weight: 900">${errors.id_queue }</span>
 	<br/>
-	<input type="submit" value="Delete course"/>
+	<input type="submit" value="Delete queue"/>
 </form>
   </body>
 </html>

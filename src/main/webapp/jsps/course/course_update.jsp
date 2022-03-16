@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update ta_list</title>
+    <title>Update course</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">

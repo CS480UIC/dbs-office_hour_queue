@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read ta_list Output</title>
+    <title>Read queue Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,17 +21,22 @@
   </head>
   
   <body>
-  <h1>Read course Output</h1>
+  <h1>Read queue Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	course_number:<input type="text" name="ta_email" value="${course.course_number }" disabled/>
+	id_queue:<input type="text" name="id_queue" value="${queue.id_queue }" disabled/>
 	<br/>
-	
-	teaching_assistant：<input type="text" name="ta_course_number" value="${course.teaching_assistant }" disabled />
+	student_email:<input type="text" name="student_email" value="${queue.student_email }" disabled/>
 	<br/>
-	
-	professor	：<input type="text" name="ta_course_department" value="${course.professor }" disabled/>
+	full_name:<input type="text" name="full_name" value="${queue.full_name }" disabled/>
 	<br/>
+	follow_up:<input type="text" name="follow_up" value="${queue.follow_up }" disabled/>
+	<br/>
+	queue_date:<input type="text" name="queue_date" value="${queue.queue_date }" disabled/>
+	<br/>
+	officeHourID:<input type="text" name="officeHourID" value="${queue.officeHourID }" disabled/>
+	<br/>
+		
 </form>
 
 <button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>

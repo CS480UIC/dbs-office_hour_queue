@@ -39,10 +39,10 @@
 	queue_date： <input type="text" name="queue_date" value="${form.queue_date }"/>
 	<span style="color: red; font-weight: 900">${errors.queue_date }</span>
 	<br/>
-	officeHourID： <input type="text" name="full_name" value="${form.officeHourID }"/>
+	officeHourID： <input type="text" name="officeHourIDe" value="${form.officeHourID }"/>
 	<span style="color: red; font-weight: 900">${errors.officeHourID }</span>
 	<br/>
-	<input type="submit" value="Create course"/>
+	<input type="submit" value="Create queue"/>
 </form>
   </body>
 </html>

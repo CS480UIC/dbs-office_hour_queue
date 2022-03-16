@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>ta_list Create</title>
+    <title>course Create</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">

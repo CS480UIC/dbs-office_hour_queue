@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update ta_list</title>
+    <title>Update queue</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -24,26 +24,39 @@
   <h1>Update course</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	course_number: <input type="text" name="ta_email" value="${course.course_number }" disabled/>
+	id_queue: <input type="text" name="id_queue" value="${queue.id_queue }" disabled/>
 	<br/>
-	
-	teaching_assistant： <input type="text" name="ta_course_number" value="${course.teaching_assistant }" disabled />
+	student_email: <input type="text" name="student_email" value="${queue.student_email }" disabled/>
 	<br/>
-	
-	professor： <input type="text" name="ta_course_department" value="${course.professor }" disabled/>
+	full_name: <input type="text" name="full_name" value="${queue.full_name }" disabled/>
+	<br/>
+	follow_up: <input type="text" name="follow_up" value="${queue.follow_up }" disabled/>
+	<br/>
+	queue_date: <input type="text" name="queue_date" value="${queue.queue_date }" disabled/>
+	<br/>
+	officeHourID: <input type="text" name="officeHourID" value="${queue.officeHourID }" disabled/>
 	<br/>
 </form>
 <h1>Update the values below</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${course.course_number }"/>
-	teaching_assistant：<input type="password" name="password" value="${form.teaching_assistant }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+				<input type="hidden" name="id_queue" value="${queue.id_queue }"/>
+	student_email：<input type="text" name="student_email" value="${form.student_email }"/>
+	<span style="color: red; font-weight: 900">${errors.student_email }</span>
 	<br/>
-	professor	：<input type="text" name="email" value="${form.professo }"/>
-	<span style="color: red; font-weight: 900">${errors.professo }</span>
+	full_name：<input type="text" name="full_name" value="${form.full_name }"/>
+	<span style="color: red; font-weight: 900">${errors.student_email }</span>
 	<br/>
-	<input type="submit" value="Update course"/>
+	follow_up：<input type="text" name="follow_up" value="${form.follow_up }"/>
+	<span style="color: red; font-weight: 900">${errors.follow_up }</span>
+	<br/>
+	queue_date：<input type="text" name="queue_date" value="${form.queue_date }"/>
+	<span style="color: red; font-weight: 900">${errors.queue_date }</span>
+	<br/>
+	officeHourID：<input type="text" name="officeHourID" value="${form.officeHourID }"/>
+	<span style="color: red; font-weight: 900">${errors.officeHourID }</span>
+	<br/>
+	<input type="submit" value="Update queue"/>
 </form>
 
 </body>

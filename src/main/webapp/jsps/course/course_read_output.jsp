@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read ta_list Output</title>
+    <title>Read course Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
