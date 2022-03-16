@@ -42,12 +42,18 @@
 <h1>Update the values below</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${student.username }"/>
-	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+				<input type="hidden" name="student_email" value="${student.student_email }"/>
+	full_name	：<input type="text" name="full_name" value="${form.full_name }"/>
+	<span style="color: red; font-weight: 900">${errors.full_name }</span>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	note	：<input type="text" name="note" value="${form.note }"/>
+	<span style="color: red; font-weight: 900">${errors.note }</span>
+	<br/>
+	is_ta	：<input type="text" name="is_ta" value="${form.is_ta }"/>
+	<span style="color: red; font-weight: 900">${errors.is_ta }</span>
+	<br/>
+	queueID	：<input type="text" name="queueID" value="${form.queueID }"/>
+	<span style="color: red; font-weight: 900">${errors.queueID }</span>
 	<br/>
 	<input type="submit" value="Update Student"/>
 </form>

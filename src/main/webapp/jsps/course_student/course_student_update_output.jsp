@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update ta_list</title>
+    <title>Update course_student</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>Update ta_list</h1>
+  <h1>Update course_student</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
 	student_email:<input type="text" name="student_email" value="${course_student.student_email }" disabled/>
@@ -34,14 +34,14 @@
 <h1>Update the values below</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${course_student.username }"/>
-	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+				<input type="hidden" name="student_email" value="${course_student.student_email }"/>
+	student_email：<input type="text" name="student_email" value="${form.student_email }"/>
+	<span style="color: red; font-weight: 900">${errors.student_email }</span>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	course_number	：<input type="text" name="course_number" value="${form.course_number }"/>
+	<span style="color: red; font-weight: 900">${errors.course_number }</span>
 	<br/>
-	<input type="submit" value="Update ta_list"/>
+	<input type="submit" value="Update course_student"/>
 </form>
 
 </body>
