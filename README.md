@@ -24,9 +24,13 @@ The entities are designed such that fetching and writing data is seamless during
 
 ## CRUD for student
 ![Alt text](/screenshots/crud_student.png?raw=true)
+
 ![Alt text](/screenshots/create_student.png?raw=true)
+
 ![Alt text](/screenshots/read_student.png?raw=true)
+
 ![Alt text](/screenshots/update_student.png?raw=true)
+
 ![Alt text](/screenshots/delete_student.png?raw=true)
 
 ## CRUD for ta_list
