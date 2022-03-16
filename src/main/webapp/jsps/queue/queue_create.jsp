@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>ta_list Create</title>
+    <title>queue Create</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -24,7 +24,7 @@
   <h1>Create queue</h1>
   
 <form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	id_queue: <input type="text" name="ta_email" value="${form.id_queue }"/>
+	id_queue: <input type="text" name="id_queue" value="${form.id_queue }"/>
 	<span style="color: red; font-weight: 900">${errors.id_queue  }</span>
 	<br/>
 	student_email： <input type="text" name="student_email" value="${form.student_email }"/>

@@ -5,8 +5,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
+    <base href="">
     
-    <title>Update queue</title>
+    <title>body</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +22,12 @@
   </head>
   
   <body>
-  <h1>Update queue</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Update queue with id_queue: <input type="text" name="id_queue" value="${form.id_queue }"/>
-	<span style="color: red; font-weight: 900">${errors.id_queue }</span>
-	<br/>
-	<input type="submit" value="Update queue"/>
-</form>
+    <h1>CRUD operations for office_hour</h1>
+    <br>
+	<a href="<c:url value='/jsps/queue/queue_create.jsp'/>" target="_parent">Create office_hour</a> |&nbsp; 
+	<a href="<c:url value='/jsps/queue/queue_read.jsp'/>" target="_parent">Read office_hour</a> |&nbsp;
+	<a href="<c:url value='/jsps/queue/queue_update.jsp'/>" target="_parent">Update office_hour</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/queue/queue_delete.jsp'/>" target="_parent">Delete office_hour</a>	
+	    
   </body>
 </html>

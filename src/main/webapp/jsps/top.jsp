@@ -49,7 +49,7 @@
 			<a href="<c:url value='/jsps/course_student/menu.jsp'/>" target="body">CRUD course_student</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/course/menu.jsp'/>" target="body">CRUD course</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/queue/menu.jsp'/>" target="body">CRUD queue</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/student/menu.jsp'/>" target="body">CRUD office_hour</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/office_hour/menu.jsp'/>" target="body">CRUD office_hour</a> |&nbsp;&nbsp;
 
 		</c:otherwise>
 	</c:choose>

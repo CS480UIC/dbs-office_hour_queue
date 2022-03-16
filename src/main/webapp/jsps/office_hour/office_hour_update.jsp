@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update queue</title>
+    <title>Update office_hour</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,13 @@
   </head>
   
   <body>
-  <h1>Update queue</h1>
+  <h1>Update office_hour</h1>
 <form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update queue with id_queue: <input type="text" name="id_queue" value="${form.id_queue }"/>
-	<span style="color: red; font-weight: 900">${errors.id_queue }</span>
+	Update office_hour with id_office_hour: <input type="text" name="id_office_hour" value="${form.id_office_hour }"/>
+	<span style="color: red; font-weight: 900">${errors.id_office_hour }</span>
 	<br/>
-	<input type="submit" value="Update queue"/>
+	<input type="submit" value="Update office_hour"/>
 </form>
   </body>
 </html>

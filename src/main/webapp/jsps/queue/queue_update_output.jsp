@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>Update course</h1>
+  <h1>Update queue</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
 	id_queue: <input type="text" name="id_queue" value="${queue.id_queue }" disabled/>
