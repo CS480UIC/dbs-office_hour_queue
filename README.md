@@ -1,7 +1,7 @@
 ## Table of Contents
 1. [Database](#database)
 2. [Author(s)](#Author(s))
-3. [Database description](#Database description)
+3. [Database description](#Database_Description)
 
 
 # Database
@@ -12,7 +12,7 @@ Amanuel Odicho
 
 Darian Danciu
 
-# Database description
+# Database_Description
 Office Hour Queue DB that will store information about courses, office hours, students, TAs, and Professors. 
 
 In total there are 5 entities in our database.
