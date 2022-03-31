@@ -18,6 +18,7 @@
 --
 -- Table structure for table `course`
 --
+use office_hour_queue;
 
 DROP TABLE IF EXISTS `course`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -81,7 +82,6 @@ CREATE TABLE `office_hour` (
   PRIMARY KEY (`id_office_hour`),
   FOREIGN KEY (course_number) REFERENCES course(course_number)
 	ON DELETE CASCADE
-    ON UPDATE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -112,7 +112,6 @@ CREATE TABLE `queue` (
   PRIMARY KEY (`id_queue`),
   FOREIGN KEY (officeHourID) REFERENCES office_hour(id_office_hour)
 	ON DELETE CASCADE
-    ON UPDATE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
