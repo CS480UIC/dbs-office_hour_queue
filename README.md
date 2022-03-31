@@ -1,7 +1,7 @@
 ## Table of Contents
 1. [Database](#database)
-2. [Author(s)](#author)
-3. [Database description](#description)
+2. [Author(s)](#Author(s))
+3. [Database description](#Database description)
 
 
 # Database
