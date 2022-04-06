@@ -51,13 +51,13 @@ public class Student {
 	/**
 	 * @return the queueID
 	 */
-	public String getQueueID() {
+	public Integer getQueueID() {
 		return queueID;
 	}
 	/**
 	 * @param queueID the queueID to set
 	 */
-	public void setQueueID(String queueID) {
+	public void setQueueID(Integer queueID) {
 		this.queueID = queueID;
 	}
 	/**
@@ -74,6 +74,6 @@ public class Student {
 	}
 	private String full_name;
 	private String note;
-	private String queueID;
+	private Integer queueID;
 	private String is_ta;
 }

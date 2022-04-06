@@ -6,11 +6,11 @@ import student.domain.Student;
 
 /**
  * logic functions such as register, login
- * @author Aayush Makharia
+ * @author Darian Danciu and Amanuel Odicho
  *
  */
 public class StudentService {
-	private StudentDao entity1Dao = new StudentDao();
+	private StudentDao studentDao = new StudentDao();
 	
 	/**
 	 * register a Entity1
@@ -21,27 +21,8 @@ public class StudentService {
 	 */
 	public void create(Student form) throws StudentException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		// check the primary key of Entity1
-		Student entity1 = entity1Dao.findByStudent_email(form.getUsername());
-		if(entity1.getUsername()!=null && entity1.getUsername().equals(form.getUsername())) throw new StudentException("This user name has been registered!");
-		entity1Dao.add(form);
-	}
-	/**
-	 * Login function
-	 * @param form
-	 * @return
-	 * @throws UserException 
-	 * @throws ClassNotFoundException 
-	 * @throws IllegalAccessException 
-	 * @throws InstantiationException 
-	 */
-	public void login(Student form) throws StudentException, ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Student user = entity1Dao.findByStudent_email(form.getUsername());
-		if(user.getUsername()==null) throw new StudentException("The user is not in the database");
-		
-		String password = user.getPassword();
-		
-		if(password!=null && !password.equals(form.getPassword()))
-			throw new StudentException(" The password is not right");
-		
+		Student student = studentDao.findByStudent_email(form.getStudent_email());
+		if(student.getStudent_email()!=null && student.getStudent_email().equals(form.getStudent_email())) throw new StudentException("This student already exists!");
+		studentDao.add(form);
 	}
 }

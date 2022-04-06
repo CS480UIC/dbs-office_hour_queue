@@ -41,6 +41,32 @@ INSERT INTO `course` VALUES (111,'Bob Smith','David Hayes'),(151,'John Doe','Ste
 UNLOCK TABLES;
 
 --
+-- Table structure for table `course_student`
+--
+
+DROP TABLE IF EXISTS `course_student`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `course_student` (
+  `student_email` varchar(255) NOT NULL,
+  `course_number` int NOT NULL,
+  PRIMARY KEY (`student_email`,`course_number`),
+  KEY `course_number` (`course_number`),
+  CONSTRAINT `course_student_ibfk_1` FOREIGN KEY (`student_email`) REFERENCES `student` (`student_email`) ON DELETE CASCADE,
+  CONSTRAINT `course_student_ibfk_2` FOREIGN KEY (`course_number`) REFERENCES `course` (`course_number`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `course_student`
+--
+
+LOCK TABLES `course_student` WRITE;
+/*!40000 ALTER TABLE `course_student` DISABLE KEYS */;
+/*!40000 ALTER TABLE `course_student` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `entity1`
 --
 
@@ -78,7 +104,9 @@ CREATE TABLE `office_hour` (
   `location` varchar(255) DEFAULT NULL,
   `meetup_time` varchar(255) DEFAULT NULL,
   `meetup_date` date DEFAULT NULL,
-  PRIMARY KEY (`id_office_hour`)
+  PRIMARY KEY (`id_office_hour`),
+  KEY `course_number` (`course_number`),
+  CONSTRAINT `office_hour_ibfk_1` FOREIGN KEY (`course_number`) REFERENCES `course` (`course_number`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -106,7 +134,9 @@ CREATE TABLE `queue` (
   `follow_up` varchar(255) DEFAULT NULL,
   `queue_date` datetime DEFAULT NULL,
   `officeHourID` int NOT NULL,
-  PRIMARY KEY (`id_queue`)
+  PRIMARY KEY (`id_queue`),
+  KEY `officeHourID` (`officeHourID`),
+  CONSTRAINT `queue_ibfk_1` FOREIGN KEY (`officeHourID`) REFERENCES `office_hour` (`id_office_hour`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -116,7 +146,7 @@ CREATE TABLE `queue` (
 
 LOCK TABLES `queue` WRITE;
 /*!40000 ALTER TABLE `queue` DISABLE KEYS */;
-INSERT INTO `queue` VALUES ('1','ddanci2@uic.edu','Darian Danciu','No','2022-03-30 00:00:00',1),('2','aodich5@uic.edu','Amanuel Odicho','No','2022-04-01 00:00:00',2);
+INSERT INTO `queue` VALUES (1,'ddanci2@uic.edu','Darian Danciu','No','2022-03-30 00:00:00',1),(2,'aodich5@uic.edu','Amanuel Odicho','No','2022-04-01 00:00:00',2);
 /*!40000 ALTER TABLE `queue` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -135,7 +165,10 @@ CREATE TABLE `student` (
   `is_ta` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`student_email`),
   UNIQUE KEY `student_email_UNIQUE` (`student_email`),
-  KEY `queueID_idx` (`queueID`)
+  KEY `queueID` (`queueID`),
+  CONSTRAINT `student_ibfk_1` FOREIGN KEY (`student_email`) REFERENCES `course_student` (`student_email`),
+  CONSTRAINT `student_ibfk_2` FOREIGN KEY (`student_email`) REFERENCES `ta_list` (`ta_email`),
+  CONSTRAINT `student_ibfk_3` FOREIGN KEY (`queueID`) REFERENCES `queue` (`id_queue`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -145,7 +178,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES ('aodich5@uic.edu','Amanuel Odicho','','2','No'),('bChilling@uic.edu','Bing Chilling','','','Yes'),('bSmith@uic.edu','Bob Smith','','','Yes'),('dCousins@uic.edu','DeMarcus Cousins','','','Yes'),('ddanci2@uic.edu','Darian Danciu','','1','No'),('fGibbs@uic.edu','Freddy Gibbs','','','Yes'),('jDoe@uic.edu','John Doe','','','Yes');
+INSERT INTO `student` VALUES ('aodich5@uic.edu','Amanuel Odicho','',2,'No'),('bChilling@uic.edu','Bing Chilling','',0,'Yes'),('bSmith@uic.edu','Bob Smith','',0,'Yes'),('dCousins@uic.edu','DeMarcus Cousins','',0,'Yes'),('ddanci2@uic.edu','Darian Danciu','',1,'No'),('fGibbs@uic.edu','Freddy Gibbs','',0,'Yes'),('jDoe@uic.edu','John Doe','',0,'Yes');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -208,4 +241,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-31 17:24:47
+-- Dump completed on 2022-04-05 20:01:05
