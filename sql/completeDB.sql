@@ -100,7 +100,7 @@ DROP TABLE IF EXISTS `queue`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `queue` (
-  `id_queue` varchar(255) NOT NULL,
+  `id_queue` int NOT NULL,
   `student_email` varchar(255) DEFAULT NULL,
   `full_name` varchar(255) DEFAULT NULL,
   `follow_up` varchar(255) DEFAULT NULL,
@@ -131,7 +131,7 @@ CREATE TABLE `student` (
   `student_email` varchar(255) NOT NULL,
   `full_name` varchar(255) NOT NULL,
   `note` varchar(255) DEFAULT NULL,
-  `queueID` varchar(255) DEFAULT NULL,
+  `queueID` int DEFAULT NULL,
   `is_ta` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`student_email`),
   UNIQUE KEY `student_email_UNIQUE` (`student_email`),
