@@ -23,9 +23,9 @@
   <body>
   <h1>Delete Student</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/StudentServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${student.student_email }"/>
+		<input type="hidden" name="student_email" value="${student.student_email }"/>
 	student_email:<input type="text" name="student_email" value="${student.student_email }" disabled/>
 	<br/>
 	

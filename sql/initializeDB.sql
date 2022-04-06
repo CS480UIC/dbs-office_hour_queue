@@ -81,9 +81,9 @@ CREATE TABLE `office_hour` (
   `location` varchar(255) DEFAULT NULL,
   `meetup_time` varchar(255) DEFAULT NULL,
   `meetup_date` date DEFAULT NULL,
-  PRIMARY KEY (`id_office_hour`),
-  FOREIGN KEY (course_number) REFERENCES course(course_number)
-	ON DELETE CASCADE
+  PRIMARY KEY (`id_office_hour`)
+  -- FOREIGN KEY (course_number) REFERENCES course(course_number)
+	-- ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -100,8 +100,6 @@ UNLOCK TABLES;
 --
 -- Table structure for table `queue`
 --
-
-
 DROP TABLE IF EXISTS `queue`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -112,8 +110,8 @@ CREATE TABLE `queue` (
 `follow_up` varchar(255) DEFAULT NULL,   
 `queue_date` datetime DEFAULT NULL,   
 `officeHourID` int NOT NULL,   
-PRIMARY KEY (`id_queue`),   
-FOREIGN KEY (officeHourID) REFERENCES office_hour(id_office_hour)  ON DELETE CASCADE 
+PRIMARY KEY (`id_queue`)
+-- FOREIGN KEY (officeHourID) REFERENCES office_hour(id_office_hour)  ON DELETE CASCADE 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -133,10 +131,10 @@ DROP TABLE IF EXISTS `course_student`;
 CREATE TABLE `course_student` (
 	`student_email` varchar(255) NOT NULL,
     `course_number` int NOT NULL,
-    PRIMARY KEY (`student_email`, `course_number`),
-    FOREIGN KEY (`student_email`) REFERENCES student(`student_email`)
-		ON DELETE CASCADE,
-	FOREIGN KEY (`course_number`) REFERENCES course(`course_number`)
+    PRIMARY KEY (`student_email`, `course_number`)
+    -- FOREIGN KEY (`student_email`) REFERENCES student(`student_email`)
+	-- 	ON DELETE CASCADE,
+	-- FOREIGN KEY (`course_number`) REFERENCES course(`course_number`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 --
 -- Table structure for table `student`
@@ -152,10 +150,9 @@ CREATE TABLE `student` (
   `queueID` int DEFAULT NULL,
   `is_ta` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`student_email`),
-  UNIQUE KEY `student_email_UNIQUE` (`student_email`),
-  FOREIGN KEY (`student_email`) REFERENCES course_student(`student_email`),
-  FOREIGN KEY (`student_email`) REFERENCES ta_list(`ta_email`),
-  FOREIGN KEY (`queueID`) REFERENCES queue(`id_queue`)
+  UNIQUE KEY `student_email_UNIQUE` (`student_email`)
+--  FOREIGN KEY (`student_email`) REFERENCES course_student(`student_email`),
+--  FOREIGN KEY (`student_email`) REFERENCES ta_list(`ta_email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

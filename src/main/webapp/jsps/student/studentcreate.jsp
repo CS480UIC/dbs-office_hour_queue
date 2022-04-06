@@ -35,12 +35,13 @@
 	<span style="color: red; font-weight: 900">${errors.note }</span>
 	<br/>
 	
-	is_ta	：<input type="text" name="is_ta" value="${form.is_ta }"/>
-	<span style="color: red; font-weight: 900">${errors.is_ta }</span>
-	<br/>
-	
 	queueID	：<input type="text" name="queueID" value="${form.queueID }"/>
 	<span style="color: red; font-weight: 900">${errors.queueID }</span>
+	<br/>
+	
+		
+	is_ta	：<input type="text" name="is_ta" value="${form.is_ta }"/>
+	<span style="color: red; font-weight: 900">${errors.is_ta }</span>
 	<br/>
 	
 	<input type="submit" value="Create Student"/>

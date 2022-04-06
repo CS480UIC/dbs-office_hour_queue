@@ -53,8 +53,8 @@ public class StudentServletCreate extends HttpServlet {
 		form.setStudent_email(info.get(0));
 		form.setFull_name(info.get(1));
 		form.setNote(info.get(2));		
-		form.setIs_ta(info.get(3));
-		form.setQueueID(Integer.parseInt(info.get(4)));
+		form.setQueueID(Integer.parseInt(info.get(3)));
+		form.setIs_ta(info.get(4));
 		
 		
 		try {

@@ -33,14 +33,15 @@
 	note	：<input type="text" name="note" value="${student.note }" disabled/>
 	<br/>
 	
+	queueID	：<input type="text" name="queueID" value="${student.queueID }" disabled/>
+	<br/>
+	
 	is_ta	：<input type="text" name="is_ta" value="${student.is_ta }" disabled/>
 	<br/>
 	
-	queueID	：<input type="text" name="queueID" value="${student.queueID }" disabled/>
-	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/StudentServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
 				<input type="hidden" name="student_email" value="${student.student_email }"/>
 	full_name	：<input type="text" name="full_name" value="${form.full_name }"/>
@@ -49,11 +50,11 @@
 	note	：<input type="text" name="note" value="${form.note }"/>
 	<span style="color: red; font-weight: 900">${errors.note }</span>
 	<br/>
-	is_ta	：<input type="text" name="is_ta" value="${form.is_ta }"/>
-	<span style="color: red; font-weight: 900">${errors.is_ta }</span>
-	<br/>
 	queueID	：<input type="text" name="queueID" value="${form.queueID }"/>
 	<span style="color: red; font-weight: 900">${errors.queueID }</span>
+	<br/>
+	is_ta	：<input type="text" name="is_ta" value="${form.is_ta }"/>
+	<span style="color: red; font-weight: 900">${errors.is_ta }</span>
 	<br/>
 	<input type="submit" value="Update Student"/>
 </form>

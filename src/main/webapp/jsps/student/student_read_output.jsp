@@ -33,11 +33,12 @@
 	note	：<input type="text" name="note" value="${student.note }" disabled/>
 	<br/>
 	
+	queueID	：<input type="text" name="queueID" value="${student.queueID }" disabled/>
+	<br/>
+	
 	is_ta	：<input type="text" name="is_ta" value="${student.is_ta }" disabled/>
 	<br/>
 	
-	queueID	：<input type="text" name="queueID" value="${student.queueID }" disabled/>
-	<br/>
 </form>
 
 <button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>

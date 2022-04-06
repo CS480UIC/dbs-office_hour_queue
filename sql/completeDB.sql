@@ -50,10 +50,7 @@ DROP TABLE IF EXISTS `course_student`;
 CREATE TABLE `course_student` (
   `student_email` varchar(255) NOT NULL,
   `course_number` int NOT NULL,
-  PRIMARY KEY (`student_email`,`course_number`),
-  KEY `course_number` (`course_number`),
-  CONSTRAINT `course_student_ibfk_1` FOREIGN KEY (`student_email`) REFERENCES `student` (`student_email`) ON DELETE CASCADE,
-  CONSTRAINT `course_student_ibfk_2` FOREIGN KEY (`course_number`) REFERENCES `course` (`course_number`)
+  PRIMARY KEY (`student_email`,`course_number`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -104,9 +101,7 @@ CREATE TABLE `office_hour` (
   `location` varchar(255) DEFAULT NULL,
   `meetup_time` varchar(255) DEFAULT NULL,
   `meetup_date` date DEFAULT NULL,
-  PRIMARY KEY (`id_office_hour`),
-  KEY `course_number` (`course_number`),
-  CONSTRAINT `office_hour_ibfk_1` FOREIGN KEY (`course_number`) REFERENCES `course` (`course_number`) ON DELETE CASCADE
+  PRIMARY KEY (`id_office_hour`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -134,9 +129,7 @@ CREATE TABLE `queue` (
   `follow_up` varchar(255) DEFAULT NULL,
   `queue_date` datetime DEFAULT NULL,
   `officeHourID` int NOT NULL,
-  PRIMARY KEY (`id_queue`),
-  KEY `officeHourID` (`officeHourID`),
-  CONSTRAINT `queue_ibfk_1` FOREIGN KEY (`officeHourID`) REFERENCES `office_hour` (`id_office_hour`) ON DELETE CASCADE
+  PRIMARY KEY (`id_queue`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -164,11 +157,7 @@ CREATE TABLE `student` (
   `queueID` int DEFAULT NULL,
   `is_ta` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`student_email`),
-  UNIQUE KEY `student_email_UNIQUE` (`student_email`),
-  KEY `queueID` (`queueID`),
-  CONSTRAINT `student_ibfk_1` FOREIGN KEY (`student_email`) REFERENCES `course_student` (`student_email`),
-  CONSTRAINT `student_ibfk_2` FOREIGN KEY (`student_email`) REFERENCES `ta_list` (`ta_email`),
-  CONSTRAINT `student_ibfk_3` FOREIGN KEY (`queueID`) REFERENCES `queue` (`id_queue`)
+  UNIQUE KEY `student_email_UNIQUE` (`student_email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -241,4 +230,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-05 20:01:05
+-- Dump completed on 2022-04-05 20:24:15
