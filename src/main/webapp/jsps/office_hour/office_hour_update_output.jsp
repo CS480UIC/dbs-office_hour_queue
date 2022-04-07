@@ -38,9 +38,9 @@
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/Office_HourServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="id_queue" value="${office_hour.id_queue }"/>
+				<input type="hidden" name="id_office_hour" value="${office_hour.id_office_hour }"/>
 	course_number：<input type="text" name="course_number" value="${form.course_number }"/>
 	<span style="color: red; font-weight: 900">${errors.course_number }</span>
 	<br/>

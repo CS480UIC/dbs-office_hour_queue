@@ -23,7 +23,7 @@
   <body>
   <h1>Delete office_hour</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/Office_HourServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
 		<input type="hidden" name="id_office_hour" value="${office_hour.id_office_hour }"/>
 	id_office_hour:<input type="text" name="id_office_hour" value="${office_hour.id_office_hour }" disabled/>

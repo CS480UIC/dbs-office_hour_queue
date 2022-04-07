@@ -147,6 +147,51 @@
     <url-pattern>/StudentServletUpdate</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>Office_HourServletCreate</display-name>
+    <servlet-name>Office_HourServletCreate</servlet-name>
+    <servlet-class>office_hour.web.servlet.Office_HourServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Office_HourServletCreate</servlet-name>
+    <url-pattern>/Office_HourServletCreate</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>Office_HourServletRead</display-name>
+    <servlet-name>Office_HourServletRead</servlet-name>
+    <servlet-class>office_hour.web.servlet.Office_HourServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Office_HourServletRead</servlet-name>
+    <url-pattern>/Office_HourServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+      <servlet>
+    <description></description>
+    <display-name>Office_HourServletDelete</display-name>
+    <servlet-name>Office_HourServletDelete</servlet-name>
+    <servlet-class>office_hour.web.servlet.Office_HourServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Office_HourServletDelete</servlet-name>
+    <url-pattern>/Office_HourServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <description></description>
+    <display-name>Office_HourServletUpdate</display-name>
+    <servlet-name>Office_HourServletUpdate</servlet-name>
+    <servlet-class>office_hour.web.servlet.Office_HourServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Office_HourServletUpdate</servlet-name>
+    <url-pattern>/Office_HourServletUpdate</url-pattern>
+  </servlet-mapping>
   
   <servlet>
     <description></description>

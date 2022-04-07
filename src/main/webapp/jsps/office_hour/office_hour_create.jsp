@@ -23,7 +23,7 @@
   <body>
   <h1>Create office_hour</h1>
   
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+<form action="<c:url value='/Office_HourServletCreate'/>" method="post">
 	id_office_hour: <input type="text" name="id_office_hour" value="${form.id_office_hour }"/>
 	<span style="color: red; font-weight: 900">${errors.id_office_hour  }</span>
 	<br/>

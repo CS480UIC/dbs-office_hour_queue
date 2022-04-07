@@ -22,7 +22,7 @@
   
   <body>
   <h1>Update office_hour</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/Office_HourServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Update office_hour with id_office_hour: <input type="text" name="id_office_hour" value="${form.id_office_hour }"/>
 	<span style="color: red; font-weight: 900">${errors.id_office_hour }</span>
