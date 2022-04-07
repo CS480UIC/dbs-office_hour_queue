@@ -22,7 +22,7 @@
   
   <body>
   <h1>Update queue</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/QueueServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Update queue with id_queue: <input type="text" name="id_queue" value="${form.id_queue }"/>
 	<span style="color: red; font-weight: 900">${errors.id_queue }</span>

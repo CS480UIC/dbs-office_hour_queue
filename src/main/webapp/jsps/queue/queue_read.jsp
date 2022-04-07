@@ -23,7 +23,7 @@
   <body>
   <h1>Read queue</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/QueueServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
 	id_queue    :<input type="text" name="id_queue" value="${form.id_queue }"/>
 	<span style="color: red; font-weight: 900">${errors.id_queue }</span>

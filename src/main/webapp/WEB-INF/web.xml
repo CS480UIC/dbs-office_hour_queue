@@ -195,6 +195,54 @@
   
   <servlet>
     <description></description>
+    <display-name>QueueServletCreate</display-name>
+    <servlet-name>QueueServletCreate</servlet-name>
+    <servlet-class>queue.web.servlet.QueueServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueueServletCreate</servlet-name>
+    <url-pattern>/QueueServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>QueueServletRead</display-name>
+    <servlet-name>QueueServletRead</servlet-name>
+    <servlet-class>queue.web.servlet.QueueServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueueServletRead</servlet-name>
+    <url-pattern>/QueueServletRead</url-pattern>
+  </servlet-mapping>
+  
+  
+ <servlet>
+    <description></description>
+    <display-name>QueueServletDelete</display-name>
+    <servlet-name>QueueServletDelete</servlet-name>
+    <servlet-class>queue.web.servlet.QueueServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueueServletDelete</servlet-name>
+    <url-pattern>/QueueServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <description></description>
+    <display-name>QueueServletUpdate</display-name>
+    <servlet-name>QueueServletUpdate</servlet-name>
+    <servlet-class>queue.web.servlet.QueueServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueueServletUpdate</servlet-name>
+    <url-pattern>/QueueServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
     <display-name>findAll</display-name>
     <servlet-name>findAll</servlet-name>
     

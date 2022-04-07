@@ -23,7 +23,7 @@
   <body>
   <h1>Create queue</h1>
   
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+<form action="<c:url value='/QueueServletCreate'/>" method="post">
 	id_queue: <input type="text" name="id_queue" value="${form.id_queue }"/>
 	<span style="color: red; font-weight: 900">${errors.id_queue  }</span>
 	<br/>

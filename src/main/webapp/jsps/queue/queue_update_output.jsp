@@ -38,7 +38,7 @@
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/QueueServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
 				<input type="hidden" name="id_queue" value="${queue.id_queue }"/>
 	student_email：<input type="text" name="student_email" value="${form.student_email }"/>

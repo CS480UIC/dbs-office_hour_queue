@@ -22,7 +22,7 @@
   
   <body>
   <h1>Delete queue</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/QueueServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Delete queue with id_queue   :<input type="text" name="id_queue" value="${form.id_queue}"/>
 	<span style="color: red; font-weight: 900">${errors.id_queue }</span>
