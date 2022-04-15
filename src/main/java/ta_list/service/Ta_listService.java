@@ -1,6 +1,8 @@
 package ta_list.service;
 
 
+import java.util.List;
+
 import ta_list.dao.Ta_listDao;
 import ta_list.domain.Ta_list;
 
@@ -24,5 +26,10 @@ public class Ta_listService {
 		Ta_list ta_list = ta_listDao.findByTa_email(form.getTa_email());
 		if(ta_list.getTa_email()!=null && ta_list.getTa_email().equals(form.getTa_email())) throw new Ta_listException("This ta_list already exists!");
 		ta_listDao.add(form);
+	}
+	
+	public List<Object> findOldTa_lists() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return ta_listDao.findOldTa_lists();
+		
 	}
 }

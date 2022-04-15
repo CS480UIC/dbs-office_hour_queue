@@ -5,14 +5,14 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-
-
+import java.util.ArrayList;
+import java.util.List;
 
 //import java.util.ArrayList;
 //import java.util.List;
 
 import ta_list.domain.Ta_list;
+import user.domain.User;
 
 /**
  * DDL functions performed in database
@@ -124,4 +124,28 @@ public class Ta_listDao {
 			throw new RuntimeException(e);
 		}
 	}
+	
+	public List<Object> findOldTa_lists() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/office_hour_queue", MySQL_user, MySQL_password);
+			String sql = "select * from ta_list"; //FIX SQL?
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Ta_list ta_list = new Ta_list();
+				ta_list.setTa_email(resultSet.getString("ta_email"));
+	    		ta_list.setTa_course_number(Integer.parseInt(resultSet.getString("ta_course_number")));
+	    		ta_list.setTa_course_department(resultSet.getString("ta_course_department"));
+	    		list.add(ta_list);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
+	
 }

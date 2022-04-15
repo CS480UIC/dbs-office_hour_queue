@@ -294,6 +294,19 @@
     <servlet-name>findAll</servlet-name>
     <url-pattern>/findAll</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>oldTa_lists</display-name>
+    <servlet-name>oldTa_lists</servlet-name>
+    
+    <servlet-class>ta_list.web.servlet.oldTa_lists</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>oldTa_lists</servlet-name>
+    <url-pattern>/oldTa_lists</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>login.jsp</welcome-file>
