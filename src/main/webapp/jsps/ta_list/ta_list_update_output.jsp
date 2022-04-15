@@ -34,9 +34,10 @@
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
-		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="ta_email" value="${ta_list.ta_email }"/>
+<form action="<c:url value='/Ta_listServletUpdate'/>" method="post">
+	<input type="hidden" name="method" value="update"/>
+	<input type="hidden" name="ta_email" value="${ta_list.ta_email }"/>
+	
 	ta_course_number	：<input type="text" name="ta_course_number" value="${form.ta_course_number }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>

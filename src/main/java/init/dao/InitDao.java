@@ -43,7 +43,6 @@ public class InitDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306", MySQL_user, MySQL_password);
-//			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/office_hour_queue", MySQL_user, MySQL_password);
 			
 			//Initialize the script runner
 	   		 ScriptRunner sr = new ScriptRunner(connect);

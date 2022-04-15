@@ -228,7 +228,6 @@
     <url-pattern>/QueueServletDelete</url-pattern>
   </servlet-mapping>
   
-  
    <servlet>
     <description></description>
     <display-name>QueueServletUpdate</display-name>
@@ -240,6 +239,49 @@
     <url-pattern>/QueueServletUpdate</url-pattern>
   </servlet-mapping>
   
+   <servlet>
+    <description></description>
+    <display-name>Ta_listServletCreate</display-name>
+    <servlet-name>Ta_listServletCreate</servlet-name>
+    <servlet-class>ta_list.web.servlet.Ta_listServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Ta_listServletCreate</servlet-name>
+    <url-pattern>/Ta_listServletCreate</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>Ta_listServletRead</display-name>
+    <servlet-name>Ta_listServletRead</servlet-name>
+    <servlet-class>ta_list.web.servlet.Ta_listServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Ta_listServletRead</servlet-name>
+    <url-pattern>/Ta_listServletRead</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>Ta_listServletUpdate</display-name>
+    <servlet-name>Ta_listServletUpdate</servlet-name>
+    <servlet-class>ta_list.web.servlet.Ta_listServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Ta_listServletUpdate</servlet-name>
+    <url-pattern>/Ta_listServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>Ta_listServletDelete</display-name>
+    <servlet-name>Ta_listServletDelete</servlet-name>
+    <servlet-class>ta_list.web.servlet.Ta_listServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Ta_listServletDelete</servlet-name>
+    <url-pattern>/Ta_listServletDelete</url-pattern>
+  </servlet-mapping>
   
   <servlet>
     <description></description>

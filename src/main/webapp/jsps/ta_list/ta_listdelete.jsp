@@ -22,7 +22,7 @@
   
   <body>
   <h1>Delete ta_list</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/Ta_listServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Delete ta_list with ta_email   :<input type="text" name="ta_email" value="${form.ta_email }"/>
 	<span style="color: red; font-weight: 900">${errors.ta_email }</span>

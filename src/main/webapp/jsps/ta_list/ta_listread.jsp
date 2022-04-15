@@ -23,7 +23,7 @@
   <body>
   <h1>Read ta_list</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/Ta_listServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
 	ta_email    :<input type="text" name="ta_email" value="${form.ta_email }"/>
 	<span style="color: red; font-weight: 900">${errors.ta_email }</span>
