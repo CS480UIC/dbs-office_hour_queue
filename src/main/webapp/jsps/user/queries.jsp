@@ -29,6 +29,9 @@
     <br>
     <a href="<c:url value='/oldTa_lists'/>" target="body">Please list all the old ta_lists</a>&nbsp;&nbsp;
  
-    
+    <br>
+    <a href="<c:url value='/oldCourses'/>" target="body">Please list all the old courses</a>&nbsp;&nbsp;
+  
+  
   </body>
 </html>

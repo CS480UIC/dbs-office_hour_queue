@@ -34,7 +34,7 @@
 	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/CourseServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
 				<input type="hidden" name="course_number" value="${course.course_number }"/>
 	teaching_assistant：<input type="text" name="teaching_assistant " value="${form.teaching_assistant }"/>

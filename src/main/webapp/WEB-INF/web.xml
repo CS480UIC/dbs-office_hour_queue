@@ -283,6 +283,52 @@
     <url-pattern>/Ta_listServletDelete</url-pattern>
   </servlet-mapping>
   
+  
+  <servlet>
+    <description></description>
+    <display-name>CourseServletCreate</display-name>
+    <servlet-name>CourseServletCreate</servlet-name>
+    <servlet-class>course.web.servlet.CourseServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CourseServletCreate</servlet-name>
+    <url-pattern>/CourseServletCreate</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>CourseServletRead</display-name>
+    <servlet-name>CourseServletRead</servlet-name>
+    <servlet-class>course.web.servlet.CourseServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CourseServletRead</servlet-name>
+    <url-pattern>/CourseServletRead</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>CourseServletUpdate</display-name>
+    <servlet-name>CourseServletUpdate</servlet-name>
+    <servlet-class>course.web.servlet.CourseServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CourseServletUpdate</servlet-name>
+    <url-pattern>/CourseServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>CourseServletDelete</display-name>
+    <servlet-name>CourseServletDelete</servlet-name>
+    <servlet-class>course.web.servlet.CourseServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CourseServletDelete</servlet-name>
+    <url-pattern>/CourseServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  
   <servlet>
     <description></description>
     <display-name>findAll</display-name>
@@ -305,6 +351,18 @@
   <servlet-mapping>
     <servlet-name>oldTa_lists</servlet-name>
     <url-pattern>/oldTa_lists</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>oldCourses</display-name>
+    <servlet-name>oldCourses</servlet-name>
+    
+    <servlet-class>course.web.servlet.oldCourses</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>oldCourses</servlet-name>
+    <url-pattern>/oldCourses</url-pattern>
   </servlet-mapping>
   
   <welcome-file-list>
