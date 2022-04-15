@@ -91,11 +91,12 @@ public class Ta_listDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/office_hour_queue", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE ta_list SET ta_email = ?, ta_course_number = ?, ta_course_department = ?";
+			String sql = "UPDATE ta_list SET ta_email = ?, ta_course_number = ?, ta_course_department = ? WHERE ta_email = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,form.getTa_email());
 		    preparestatement.setInt(2,form.getTa_course_number());
 		    preparestatement.setString(3, form.getTa_course_department());
+		    preparestatement.setString(4,form.getTa_email());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
