@@ -142,7 +142,7 @@ CREATE TABLE `course_student` (
 
 LOCK TABLES `course_student` WRITE;
 /*!40000 ALTER TABLE `course_student` DISABLE KEYS */;
-INSERT INTO `student` VALUES ('bChilling@uic.edu', 362), ('bSmith@uic.edu', 111), ('dCousins@uic.edu', 480);
+INSERT INTO `course_student` VALUES ('bChilling@uic.edu', 362), ('bSmith@uic.edu', 111), ('dCousins@uic.edu', 480);
 /*!40000 ALTER TABLE `course_student` ENABLE KEYS */;
 UNLOCK TABLES;
 
