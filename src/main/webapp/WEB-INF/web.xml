@@ -328,6 +328,50 @@
     <url-pattern>/CourseServletDelete</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <description></description>
+    <display-name>Course_studentServletCreate</display-name>
+    <servlet-name>Course_studentServletCreate</servlet-name>
+    <servlet-class>course_student.web.servlet.Course_studentServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Course_studentServletCreate</servlet-name>
+    <url-pattern>/Course_studentServletCreate</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>Course_studentServletRead</display-name>
+    <servlet-name>Course_studentServletRead</servlet-name>
+    <servlet-class>course_student.web.servlet.Course_studentServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Course_studentServletRead</servlet-name>
+    <url-pattern>/Course_studentServletRead</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>Course_studentServletUpdate</display-name>
+    <servlet-name>Course_studentServletUpdate</servlet-name>
+    <servlet-class>course_student.web.servlet.Course_studentServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Course_studentServletUpdate</servlet-name>
+    <url-pattern>/Course_studentServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>Course_studentServletDelete</display-name>
+    <servlet-name>Course_studentServletDelete</servlet-name>
+    <servlet-class>course_student.web.servlet.Course_studentServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Course_studentServletDelete</servlet-name>
+    <url-pattern>/Course_studentServletDelete</url-pattern>
+  </servlet-mapping>
+  
   
   <servlet>
     <description></description>
@@ -364,6 +408,19 @@
     <servlet-name>oldCourses</servlet-name>
     <url-pattern>/oldCourses</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>oldCourse_students</display-name>
+    <servlet-name>oldCourse_students</servlet-name>
+    
+    <servlet-class>course_student.web.servlet.oldCourse_students</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>oldCourse_students</servlet-name>
+    <url-pattern>/oldCourse_students</url-pattern>
+  </servlet-mapping>
+  
   
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
