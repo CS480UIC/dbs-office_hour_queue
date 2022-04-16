@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import ta_list.dao.Ta_listDao;
-import ta_list.domain.Ta_list;
+import course_student.dao.Course_studentDao;
+import course_student.domain.Course_student;
 
 
 /**
@@ -37,11 +37,11 @@ public class Course_studentServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Ta_list ta_list = null;
-		Ta_listDao ta_listDao = new Ta_listDao();
+		Course_student course_student = null;
+		Course_studentDao course_studentDao = new Course_studentDao();
 		
 		try {
-			ta_list = ta_listDao.findByTa_email(request.getParameter("ta_email"));
+			course_student = course_studentDao.findBySM_CN(request.getParameter("student_email"), Integer.parseInt(request.getParameter("course_number")));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -50,14 +50,14 @@ public class Course_studentServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		if(ta_list.getTa_email()!=null){
-					System.out.println(ta_list);
-					request.setAttribute("ta_list", ta_list);
-					request.getRequestDispatcher("/jsps/ta_list/ta_list_read_output.jsp").forward(request, response);
+		if(course_student.getStudent_email()!=null && course_student.getCourse_number()!=null){
+					System.out.println(course_student);
+					request.setAttribute("course_student", course_student);
+					request.getRequestDispatcher("/jsps/course_student/course_student_read_output.jsp").forward(request, response);
 			}
 			else{
-			request.setAttribute("msg", "ta_list not found");
-			request.getRequestDispatcher("/jsps/ta_list/ta_list_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "course_student not found");
+			request.getRequestDispatcher("/jsps/course_student/course_student_read_output.jsp").forward(request, response);
 		}
 	}
 }

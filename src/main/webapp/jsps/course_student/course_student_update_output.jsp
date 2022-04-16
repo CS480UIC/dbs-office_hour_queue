@@ -32,7 +32,7 @@
 
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/Course_studentServletUpdate'/>" method="post">
 		<input type="hidden" name="method" value="update"/>
 				<input type="hidden" name="student_email" value="${course_student.student_email }"/>
 	student_email：<input type="text" name="student_email" value="${form.student_email }"/>

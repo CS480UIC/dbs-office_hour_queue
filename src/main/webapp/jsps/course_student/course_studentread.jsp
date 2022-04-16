@@ -23,12 +23,12 @@
   <body>
   <h1>Read course_student</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/Course_studentServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
 	student_email and course_number   :<input type="text" name="student_email" value="${form.student_email }"/>
 	<span style="color: red; font-weight: 900">${errors.student_email }</span>
 	
-	<input type="text" name="student_email" value="${form.course_number }"/>
+	<input type="text" name="course_number" value="${form.course_number }"/>
 	<span style="color: red; font-weight: 900">${errors.course_number }</span>
 	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>

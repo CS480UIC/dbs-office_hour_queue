@@ -32,6 +32,7 @@
     <br>
     <a href="<c:url value='/oldCourses'/>" target="body">Please list all the old courses</a>&nbsp;&nbsp;
   
-  
+    <br>
+    <a href="<c:url value='/oldCourse_students'/>" target="body">Please list all the old course_students</a>&nbsp;&nbsp;
   </body>
 </html>

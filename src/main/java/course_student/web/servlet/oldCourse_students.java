@@ -25,9 +25,9 @@ public class oldCourse_students extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Course_studentService ta_listservice = new Course_studentService();
+		Course_studentService course_studentservice = new Course_studentService();
 		try {
-			request.setAttribute("Ta_listList", ta_listservice.findOldCourse_students()); //TODO
+			request.setAttribute("Course_studentList", course_studentservice.findOldCourse_students());
 		} catch (InstantiationException | IllegalAccessException
 				| ClassNotFoundException e) {
 			e.printStackTrace();
@@ -44,7 +44,7 @@ public class oldCourse_students extends HttpServlet {
 //		}
 		
 		
-		request.getRequestDispatcher("/jsps/ta_list/q2_old_ta_list.jsp").forward(request, response);
+		request.getRequestDispatcher("/jsps/course_student/q3_old_course_student.jsp").forward(request, response);
 	}
 
 }

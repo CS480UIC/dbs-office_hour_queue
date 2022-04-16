@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import ta_list.dao.Ta_listDao;
-import ta_list.domain.Ta_list;
+import course_student.dao.Course_studentDao;
+import course_student.domain.Course_student;
 
 /**
  * Servlet implementation class UserServlet
@@ -40,13 +40,13 @@ public class Course_studentServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		Ta_listDao ta_listdao = new Ta_listDao();
-		Ta_list ta_list = null;
+		Course_studentDao course_studentdao = new Course_studentDao();
+		Course_student course_student = null;
 
 		if(method.equals("search"))
 		{
 			try {
-				ta_list = ta_listdao.findByTa_email(request.getParameter("ta_email"));
+				course_student = course_studentdao.findBySM_CN(request.getParameter("student_email"), Integer.parseInt(request.getParameter("course_number")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -55,20 +55,20 @@ public class Course_studentServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(ta_list.getTa_email()!=null){
-				request.setAttribute("ta_list", ta_list);
-				request.getRequestDispatcher("/jsps/ta_list/ta_list_update_output.jsp").forward(request, response);
+			if(course_student.getStudent_email()!=null && course_student.getCourse_number()!=null){
+				request.setAttribute("course_student", course_student);
+				request.getRequestDispatcher("/jsps/course_student/course_student_update_output.jsp").forward(request, response);
 
 			}
 			else{
-				request.setAttribute("msg", "Student not found");
-				request.getRequestDispatcher("/jsps/ta_list/ta_list_update_output.jsp").forward(request, response);
+				request.setAttribute("msg", "Course_student not found");
+				request.getRequestDispatcher("/jsps/course_student/course_student_update_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
 		{
 			Map<String,String[]> paramMap = request.getParameterMap();
-			Ta_list form = new Ta_list();
+			Course_student form = new Course_student();
 			List<String> info = new ArrayList<String>();
 
 			for(String name : paramMap.keySet()) {
@@ -76,11 +76,13 @@ public class Course_studentServletUpdate extends HttpServlet {
 				info.add(values[0]);
 			}
 
-			form.setTa_course_number(Integer.parseInt(info.get(2)));
-			form.setTa_course_department(info.get(3));
-			form.setTa_email(request.getParameter("ta_email"));
+			form.setStudent_email(request.getParameter("student_email"));
+			form.setCourse_number(Integer.parseInt(request.getParameter("course_number")));
+			form.setStudent_email_UPDATE(info.get(3));
+			form.setCourse_number_UPDATE(Integer.parseInt(info.get(4)));
+			
 			try {
-				ta_listdao.update(form);
+				course_studentdao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -89,8 +91,8 @@ public class Course_studentServletUpdate extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Ta_list Updated");
-			request.getRequestDispatcher("/jsps/ta_list/ta_list_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "Course_student Updated");
+			request.getRequestDispatcher("/jsps/course_student/course_student_read_output.jsp").forward(request, response);
 		}
 	}
 }

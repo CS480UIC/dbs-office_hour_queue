@@ -6,8 +6,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import ta_list.dao.Ta_listDao;
-import ta_list.domain.Ta_list;
+import course_student.dao.Course_studentDao;
+import course_student.domain.Course_student;
 
 
 /**
@@ -36,12 +36,14 @@ public class Course_studentServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		Ta_listDao ta_listDao = new Ta_listDao();
-		Ta_list ta_list = null;
+		Course_studentDao course_studentDao = new Course_studentDao();
+		Course_student course_student = null;
 		if(method.equals("search"))
 		{
 			try {
-				ta_list = ta_listDao.findByTa_email(request.getParameter("ta_email"));
+				System.out.println(Integer.parseInt(request.getParameter("course_number")));
+
+				course_student = course_studentDao.findBySM_CN(request.getParameter("student_email"), Integer.parseInt(request.getParameter("course_number")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -50,20 +52,24 @@ public class Course_studentServletDelete extends HttpServlet {
 				e1.printStackTrace();
 			}
 		
-			if(ta_list.getTa_email()!=null){
-						System.out.println(ta_list);
-						request.setAttribute("ta_list", ta_list);
-						request.getRequestDispatcher("/jsps/ta_list/ta_list_delete_output.jsp").forward(request, response);			
+			if(course_student.getStudent_email()!=null && course_student.getCourse_number()!=null){
+						System.out.println(course_student);
+						request.setAttribute("course_student", course_student);
+						request.getRequestDispatcher("/jsps/course_student/course_student_delete_output.jsp").forward(request, response);			
 				}
 				else{
-				request.setAttribute("msg", "Ta_list not found");
-				request.getRequestDispatcher("/jsps/ta_list/ta_list_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "Course_student not found");
+				request.getRequestDispatcher("/jsps/course_student/course_student_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("delete"))
 		{	
+
 			try {
-				ta_listDao.delete(request.getParameter("ta_email"));
+				System.out.println(request.getParameter("student_email"));
+				System.out.println(Integer.parseInt(request.getParameter("course_number")));
+
+				course_studentDao.delete(request.getParameter("student_email"),  Integer.parseInt(request.getParameter("course_number")) );
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -71,8 +77,8 @@ public class Course_studentServletDelete extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Ta_list Deleted");
-			request.getRequestDispatcher("/jsps/ta_list/ta_list_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "course_student Deleted");
+			request.getRequestDispatcher("/jsps/course_student/course_student_read_output.jsp").forward(request, response);
 		}
 	}
 }

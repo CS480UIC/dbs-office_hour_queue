@@ -23,7 +23,7 @@
   <body>
   <h1>course_student Create</h1>
   
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+<form action="<c:url value='/Course_studentServletCreate'/>" method="post">
 	student_email    :<input type="text" name="student_email" value="${form.student_email }"/>
 	<span style="color: red; font-weight: 900">${errors.student_email }</span>
 	<br/>
