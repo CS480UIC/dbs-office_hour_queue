@@ -5,9 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-
-
+import java.util.ArrayList;
+import java.util.List;
 
 //import java.util.ArrayList;
 //import java.util.List;
@@ -133,5 +132,31 @@ public class QueueDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+	
+	public List<Object> findOldQueues() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/office_hour_queue", MySQL_user, MySQL_password);
+			String sql = "select * from queue"; //FIX SQL?
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Queue queue = new Queue();
+				queue.setId_queue(Integer.parseInt(resultSet.getString("id_queue")));
+	    		queue.setStudent_email(resultSet.getString("student_email"));
+	    		queue.setFull_name(resultSet.getString("full_name"));
+	    		queue.setFollow_up(resultSet.getString("follow_up"));
+	    		queue.setQueue_date(resultSet.getDate("queue_date"));
+	    		queue.setOfficeHourID(Integer.parseInt(resultSet.getString("officeHourID")));
+	    		list.add(queue);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
 	}
 }

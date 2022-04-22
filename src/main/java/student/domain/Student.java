@@ -60,6 +60,7 @@ public class Student {
 	public void setQueueID(Integer queueID) {
 		this.queueID = queueID;
 	}
+	
 	/**
 	 * @return the is_ta
 	 */

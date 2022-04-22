@@ -98,10 +98,6 @@ CREATE TABLE `course_student` (
 -- Table structure for table `student`
 --
 
-LOCK TABLES `course_student` WRITE;
-INSERT INTO `course_student` VALUES ('bChilling@uic.edu', 362), ('bSmith@uic.edu', 111), ('dCousins@uic.edu', 480);
-UNLOCK TABLES;
-
 DROP TABLE IF EXISTS `student`;
 CREATE TABLE `student` (
   `student_email` varchar(255) NOT NULL,
@@ -118,7 +114,7 @@ CREATE TABLE `student` (
 --
 
 LOCK TABLES `student` WRITE;
-INSERT INTO `student` VALUES ('aodich5@uic.edu','Amanuel Odicho','',2,'No'),('bChilling@uic.edu','Bing Chilling','',0,'Yes'),('bSmith@uic.edu','Bob Smith','',0,'Yes'),('dCousins@uic.edu','DeMarcus Cousins','',0,'Yes'),('ddanci2@uic.edu','Darian Danciu','',1,'No'),('fGibbs@uic.edu','Freddy Gibbs','',0,'Yes'),('jDoe@uic.edu','John Doe','',0,'Yes');
+INSERT INTO `student` VALUES ('aodich5@uic.edu','Amanuel Odicho','',2,'No'),('bChilling@uic.edu','Bing Chilling','',null,'Yes'),('bSmith@uic.edu','Bob Smith','',null,'Yes'),('dCousins@uic.edu','DeMarcus Cousins','',null,'Yes'),('ddanci2@uic.edu','Darian Danciu','',1,'No'),('fGibbs@uic.edu','Freddy Gibbs','',null,'Yes'),('jDoe@uic.edu','John Doe','',null,'Yes');
 UNLOCK TABLES;
 
 --

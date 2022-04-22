@@ -86,7 +86,6 @@ public class Course_studentDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/office_hour_queue", MySQL_user, MySQL_password);
-			
 			String sql = "UPDATE course_student SET student_email = ?, course_number = ? WHERE student_email = ? AND course_number = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,form.getStudent_email_UPDATE());

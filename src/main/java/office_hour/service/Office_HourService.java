@@ -1,6 +1,8 @@
 package office_hour.service;
 
 
+import java.util.List;
+
 import office_hour.dao.Office_HourDao;
 import office_hour.domain.Office_Hour;
 
@@ -24,4 +26,9 @@ public class Office_HourService {
 		if(office_hour.getId_office_hour()!=null && office_hour.getId_office_hour() == form.getId_office_hour()) throw new Office_HourException("This user name has been registered!");
 		office_hourDao.add(form);
 	}
+	
+	public List<Object> findOldOffice_hours() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return office_hourDao.findOldOffice_hours();
+	}
+	
 }

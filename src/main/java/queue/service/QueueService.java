@@ -2,6 +2,9 @@ package queue.service;
 
 
 import queue.domain.Queue;
+
+import java.util.List;
+
 import queue.dao.QueueDao;
 
 /**
@@ -23,5 +26,10 @@ public class QueueService {
 		Queue queue = queueDao.findById_OH(form.getId_queue());
 		if(queue.getId_queue()!=null && queue.getId_queue() == form.getId_queue()) throw new QueueException("This queue already exists!");
 		queueDao.add(form);
+	}
+	
+	public List<Object> findOldQueues() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return queueDao.findOldQueues();
+		
 	}
 }

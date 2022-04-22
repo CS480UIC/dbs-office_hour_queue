@@ -5,9 +5,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-
-
+import queue.domain.Queue;
 
 //import java.util.ArrayList;
 //import java.util.List;
@@ -129,5 +130,42 @@ public class StudentDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+	
+	public List<Object> findOldStudents() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/office_hour_queue", MySQL_user, MySQL_password);
+			String sql = "select * from student"; //FIX SQL?
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Student queue = new Student();
+	    		queue.setStudent_email(resultSet.getString("student_email"));
+	    		queue.setFull_name(resultSet.getString("full_name"));
+	    		queue.setNote(resultSet.getString("note"));
+	    		queue.setIs_ta(resultSet.getString("is_ta"));
+	    		
+//	    		System.out.println(resultSet.getString("queueID"));
+	    		String temp = resultSet.getString("queueID");
+	    		if(resultSet.getString("queueID") == "" ) {
+		    		System.out.println(temp);
+
+	    			queue.setQueueID(0);
+	    		}
+	    		else {
+		    		System.out.println(temp);
+	    				
+		    		queue.setQueueID(Integer.parseInt(temp));
+	    		}
+	    		list.add(queue);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
 	}
 }

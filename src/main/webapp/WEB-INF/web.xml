@@ -421,6 +421,41 @@
     <url-pattern>/oldCourse_students</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>oldOffice_hours</display-name>
+    <servlet-name>oldOffice_hours</servlet-name>
+    
+    <servlet-class>office_hour.web.servlet.oldOffice_hours</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>oldOffice_hours</servlet-name>
+    <url-pattern>/oldOffice_hours</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>oldQueues</display-name>
+    <servlet-name>oldQueues</servlet-name>
+    
+    <servlet-class>queue.web.servlet.oldQueues</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>oldQueues</servlet-name>
+    <url-pattern>/oldQueues</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>oldStudents</display-name>
+    <servlet-name>oldStudents</servlet-name>
+    
+    <servlet-class>student.web.servlet.oldStudents</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>oldStudents</servlet-name>
+    <url-pattern>/oldStudents</url-pattern>
+  </servlet-mapping>
   
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>

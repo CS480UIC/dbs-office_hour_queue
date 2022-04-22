@@ -75,11 +75,11 @@ public class Course_studentServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-
+			
 			form.setStudent_email(request.getParameter("student_email"));
 			form.setCourse_number(Integer.parseInt(request.getParameter("course_number")));
-			form.setStudent_email_UPDATE(info.get(3));
-			form.setCourse_number_UPDATE(Integer.parseInt(info.get(4)));
+			form.setStudent_email_UPDATE(info.get(1));
+			form.setCourse_number_UPDATE(Integer.parseInt(info.get(2)));
 			
 			try {
 				course_studentdao.update(form);
