@@ -27,10 +27,10 @@
 	<input type="hidden" name="method" value="delete"/>
 		<input type="hidden" name="student_email" value="${course_student.student_email }"/>
 		<input type="hidden" name="course_number" value="${course_student.course_number }"/>
-	student_email:<input type="text" name="student_email" value="${course_student.student_email }" disabled/>
+	student_email:<input type="text" name="student_email_delete" value="${course_student.student_email }" disabled/>
 	<br/>
 	
-	course_number：<input type="text" name="course_number" value="${course_student.course_number }" disabled />
+	course_number：<input type="text" name="course_number_delete" value="${course_student.course_number }" disabled />
 	<br/>
 		
 	<input type="submit" value="Delete course_student"/>

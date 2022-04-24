@@ -53,7 +53,8 @@ CREATE TABLE `office_hour` (
   `location` varchar(255) DEFAULT NULL,
   `meetup_time` varchar(255) DEFAULT NULL,
   `meetup_date` date DEFAULT NULL,
-  PRIMARY KEY (`id_office_hour`)
+  PRIMARY KEY (`id_office_hour`),
+  FOREIGN KEY (course_number) REFERENCES course(course_number)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -75,7 +76,9 @@ CREATE TABLE `queue` (
 `follow_up` varchar(255) DEFAULT NULL,   
 `queue_date` date DEFAULT NULL,   
 `officeHourID` int NOT NULL,   
-PRIMARY KEY (`id_queue`)
+PRIMARY KEY (`id_queue`),
+FOREIGN KEY (student_email) REFERENCES student(student_email),
+FOREIGN KEY (officeHourID) REFERENCES office_hour(id_office_hour)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -92,7 +95,9 @@ DROP TABLE IF EXISTS `course_student`;
 CREATE TABLE `course_student` (
 	`student_email` varchar(255) NOT NULL,
     `course_number` int NOT NULL,
-    PRIMARY KEY (`student_email`, `course_number`)
+    PRIMARY KEY (`student_email`, `course_number`),
+    FOREIGN KEY (student_email) REFERENCES student(student_email) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (course_number) REFERENCES course(course_number) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 --
 -- Table structure for table `student`
@@ -106,6 +111,7 @@ CREATE TABLE `student` (
   `queueID` int DEFAULT NULL,
   `is_ta` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`student_email`),
+  FOREIGN KEY (queueId) REFERENCES queue(id_queue),
   UNIQUE KEY `student_email_UNIQUE` (`student_email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -126,7 +132,8 @@ CREATE TABLE `ta_list` (
   `ta_email` varchar(255) NOT NULL,
   `ta_course_number` int NOT NULL,
   `ta_course_department` varchar(255) NOT NULL,
-  PRIMARY KEY (`ta_email`)
+  PRIMARY KEY (`ta_email`),
+  FOREIGN KEY (ta_email) REFERENCES student(student_email)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --

@@ -37,10 +37,10 @@
 				<input type="hidden" name="student_email" value="${course_student.student_email }"/>
 				<input type="hidden" name="course_number" value="${course_student.course_number }"/>
 				
-	student_email：<input type="text" name="student_email" value="${form.student_email }"/>
+	student_email：<input type="text" name="student_email_updated" value="${form.student_email }"/>
 	<span style="color: red; font-weight: 900">${errors.student_email }</span>
 	<br/>
-	course_number	：<input type="text" name="course_number" value="${form.course_number }"/>
+	course_number	：<input type="text" name="course_number_updated" value="${form.course_number }"/>
 	<span style="color: red; font-weight: 900">${errors.course_number }</span>
 	<br/>
 	<input type="submit" value="Update course_student"/>

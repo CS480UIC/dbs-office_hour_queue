@@ -62,7 +62,7 @@ public class Course_studentServletUpdate extends HttpServlet {
 			}
 			else{
 				request.setAttribute("msg", "Course_student not found");
-				request.getRequestDispatcher("/jsps/course_student/course_student_update_output.jsp").forward(request, response);
+				request.getRequestDispatcher("/jsps/course_student/course_student_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
@@ -78,8 +78,8 @@ public class Course_studentServletUpdate extends HttpServlet {
 			
 			form.setStudent_email(request.getParameter("student_email"));
 			form.setCourse_number(Integer.parseInt(request.getParameter("course_number")));
-			form.setStudent_email_UPDATE(info.get(1));
-			form.setCourse_number_UPDATE(Integer.parseInt(info.get(2)));
+			form.setStudent_email_UPDATE(info.get(3));
+			form.setCourse_number_UPDATE(Integer.parseInt(info.get(4)));
 			
 			try {
 				course_studentdao.update(form);
