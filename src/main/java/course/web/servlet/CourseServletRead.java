@@ -40,6 +40,7 @@ public class CourseServletRead extends HttpServlet {
 		Course course = null;
 		CourseDao courseDao = new CourseDao();
 		
+		
 		try {
 			course = courseDao.findByCourse_number(Integer.parseInt(request.getParameter("course_number")));
 		} catch (ClassNotFoundException e1) {
@@ -50,13 +51,14 @@ public class CourseServletRead extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
+		
 		if(course.getCourse_number()!=null){
 					System.out.println(course);
 					request.setAttribute("course", course);
 					request.getRequestDispatcher("/jsps/course/course_read_output.jsp").forward(request, response);
 			}
 			else{
-			request.setAttribute("msg", "ta_list not found");
+			request.setAttribute("msg", "course not found");
 			request.getRequestDispatcher("/jsps/course/course_read_output.jsp").forward(request, response);
 		}
 	}

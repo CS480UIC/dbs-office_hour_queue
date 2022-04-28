@@ -39,8 +39,9 @@ public class CourseDao {
 		    ResultSet resultSet = preparestatement.executeQuery();
 
 		    while(resultSet.next()){
-		    	Integer course_number = Integer.parseInt( resultSet.getString("course_number"));
-		    	if(course_number == course_number_p){
+		    	Integer course_number = Integer.parseInt(resultSet.getString("course_number"));
+		    	
+		    	if(course_number.equals(course_number_p)){
 		    		course.setCourse_number(course_number);
 		    		course.setTeaching_assistant(resultSet.getString("teaching_assistant"));
 		    		course.setProfessor(resultSet.getString("professor"));
