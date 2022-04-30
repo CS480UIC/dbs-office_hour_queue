@@ -29,7 +29,16 @@ public class CourseService {
 	}
 	
 	public List<Object> findOldCourses() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
-		return courseDao.findOldCourses();
-		
+		return courseDao.findOldCourses();	
+	}
+
+	
+	public List<Object> findCoursesView() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return courseDao.findCoursesView();	
+	}
+	
+	
+	public List<Object> findCoursesView2() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return courseDao.findCoursesView2();	
 	}
 }

@@ -409,6 +409,82 @@
     <url-pattern>/oldCourses</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <description></description>
+    <display-name>CourseView</display-name>
+    <servlet-name>CourseView</servlet-name>
+    
+    <servlet-class>course.web.servlet.CourseView</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CourseView</servlet-name>
+    <url-pattern>/CourseView</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>CourseView2</display-name>
+    <servlet-name>CourseView2</servlet-name>
+    
+    <servlet-class>course.web.servlet.CourseView2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CourseView2</servlet-name>
+    <url-pattern>/CourseView2</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>TaView2</display-name>
+    <servlet-name>TaView2</servlet-name>
+    
+    <servlet-class>ta_list.web.servlet.TaView2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TaView2</servlet-name>
+    <url-pattern>/TaView2</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>TaView</display-name>
+    <servlet-name>TaView</servlet-name>
+    
+    <servlet-class>ta_list.web.servlet.TaView</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TaView</servlet-name>
+    <url-pattern>/TaView</url-pattern>
+  </servlet-mapping>
+  
+      <servlet>
+    <description></description>
+    <display-name>StudentView</display-name>
+    <servlet-name>StudentView</servlet-name>
+    
+    <servlet-class>student.web.servlet.StudentView</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentView</servlet-name>
+    <url-pattern>/StudentView</url-pattern>
+  </servlet-mapping>
+  
+
+    <servlet>
+    <description></description>
+    <display-name>OfficeHourView</display-name>
+    <servlet-name>OfficeHourView</servlet-name>
+    
+    <servlet-class>office_hour.web.servlet.OfficeHourView</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OfficeHourView</servlet-name>
+    <url-pattern>/OfficeHourView</url-pattern>
+  </servlet-mapping>
+
+  
+  
   <servlet>
     <description></description>
     <display-name>oldCourse_students</display-name>

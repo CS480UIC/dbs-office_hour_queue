@@ -157,6 +157,30 @@ public class Office_HourDao {
 			throw new RuntimeException(e);
 		}
 		return list;
-		
+	}
+	
+	public List<Object> findOfficeHourView() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/office_hour_queue", MySQL_user, MySQL_password);
+			String sql = "select * from office_hour_view"; //FIX SQL?
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Office_Hour office_hour = new Office_Hour();
+				office_hour.setId_office_hour(Integer.parseInt(resultSet.getString("id_office_hour")));
+	    		office_hour.setCourse_number(Integer.parseInt(resultSet.getString("course_number")));
+	    		office_hour.setTa_email(resultSet.getString("ta_email"));
+	    		office_hour.setLocation(resultSet.getString("location"));
+	    		office_hour.setMeetup_time(resultSet.getString("meetup_time"));
+	    		office_hour.setMeetup_date(resultSet.getDate("meetup_date"));
+	    		list.add(office_hour);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
 	}
 }

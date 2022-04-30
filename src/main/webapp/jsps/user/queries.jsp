@@ -43,5 +43,22 @@
     
     <br>
     <a href="<c:url value='/oldStudents'/>" target="body">Please list all the old students</a>&nbsp;&nbsp;
+    
+    <br>
+    <a href="<c:url value='/CourseView'/>" target="body">Please list simple query #1</a>&nbsp;&nbsp;
+    
+   	<br>
+    <a href="<c:url value='/OfficeHourView'/>" target="body">Please list simple query #2</a>&nbsp;&nbsp;
+    
+   	<br>
+    <a href="<c:url value='/CourseView2'/>" target="body">Please list complex query #1</a>&nbsp;&nbsp;
+   	<br>
+    <a href="<c:url value='/TaView'/>" target="body">Please list complex query #2</a>&nbsp;&nbsp;  
+ 
+   	<br>
+    <a href="<c:url value='/StudentView'/>" target="body">Please list aggregate query #1</a>&nbsp;&nbsp;   
+    
+       	<br>
+    <a href="<c:url value='/TaView2'/>" target="body">Please list aggregate query #2</a>&nbsp;&nbsp;   
   </body>
 </html>

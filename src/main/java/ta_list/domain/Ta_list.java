@@ -11,6 +11,7 @@ public class Ta_list {
 	private String ta_email;
 	private Integer ta_course_number;
 	private String ta_course_department;
+	private Integer number_of_tas;
 	/**
 	 * @return the ta_email
 	 */
@@ -46,6 +47,12 @@ public class Ta_list {
 	 */
 	public void setTa_course_department(String ta_course_department) {
 		this.ta_course_department = ta_course_department;
+	}
+	public Integer getNumber_of_tas() {
+		return number_of_tas;
+	}
+	public void setNumber_of_tas(Integer number_of_tas) {
+		this.number_of_tas = number_of_tas;
 	}
 
 }
