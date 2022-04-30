@@ -146,6 +146,50 @@ public class CourseDao {
 			throw new RuntimeException(e);
 		}
 		return list;
+	}
+	
+	
+	public List<Object> findCoursesView() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/office_hour_queue", MySQL_user, MySQL_password);
+			String sql = "select * from course_view"; //FIX SQL?
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Course course = new Course();
+				course.setCourse_number(Integer.parseInt(resultSet.getString("course_number")));
+	    		course.setTeaching_assistant(resultSet.getString("teaching_assistant"));
+	    		course.setProfessor(resultSet.getString("professor"));
+	    		list.add(course);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
+	
+	public List<Object> findCoursesView2() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/office_hour_queue", MySQL_user, MySQL_password);
+			String sql = "select * from inner_join_view"; //FIX SQL?
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Course course = new Course();
+				course.setCourse_number(Integer.parseInt(resultSet.getString("course_number")));
+	    		list.add(course);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
 		
 	}
 	

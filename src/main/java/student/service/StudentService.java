@@ -30,6 +30,9 @@ public class StudentService {
 	
 	public List<Object> findOldStudents() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
 		return studentDao.findOldStudents();
-		
+	}
+	
+	public List<Object> findStudentView() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return studentDao.findStudentView();
 	}
 }

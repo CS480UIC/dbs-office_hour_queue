@@ -149,4 +149,45 @@ public class Ta_listDao {
 		
 	}
 	
+	
+	public List<Object> findTaView() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/office_hour_queue", MySQL_user, MySQL_password);
+			String sql = "select * from ta_view"; //FIX SQL?
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Ta_list ta_list = new Ta_list();
+				ta_list.setTa_email(resultSet.getString("teaching_assistant"));
+	    		list.add(ta_list);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;	
+	}
+	
+	public List<Object> findTaView2() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/office_hour_queue", MySQL_user, MySQL_password);
+			String sql = "select * from number_of_tas_view"; //FIX SQL?
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Ta_list ta_list = new Ta_list();
+				ta_list.setNumber_of_tas(Integer.parseInt(resultSet.getString("number_of_tas")));
+	    		list.add(ta_list);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
 }

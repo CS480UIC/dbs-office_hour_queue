@@ -30,6 +30,13 @@ public class Ta_listService {
 	
 	public List<Object> findOldTa_lists() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
 		return ta_listDao.findOldTa_lists();
-		
+	}
+	
+	public List<Object> findTaView() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return ta_listDao.findTaView();
+	}
+	
+	public List<Object> findTaView2() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return ta_listDao.findTaView2();
 	}
 }

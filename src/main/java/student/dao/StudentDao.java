@@ -168,4 +168,25 @@ public class StudentDao {
 		return list;
 		
 	}
+	
+	public List<Object> findStudentView() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/office_hour_queue", MySQL_user, MySQL_password);
+			String sql = "select * from upper_name_view"; //FIX SQL?
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Student queue = new Student();
+	    		queue.setFull_name(resultSet.getString("UPPER(full_name)"));
+	    		list.add(queue);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
 }

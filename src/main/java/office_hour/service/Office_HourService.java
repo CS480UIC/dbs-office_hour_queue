@@ -31,4 +31,8 @@ public class Office_HourService {
 		return office_hourDao.findOldOffice_hours();
 	}
 	
+	
+	public List<Object> findOfficeHourView() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return office_hourDao.findOfficeHourView();
+	}
 }
