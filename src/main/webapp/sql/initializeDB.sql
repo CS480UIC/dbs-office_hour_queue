@@ -107,3 +107,36 @@ UNLOCK TABLES;
 LOCK TABLES `user` WRITE;
 INSERT INTO `user` VALUES ('A','b','c'),('abc','abc1','abc2'),('pd4','pd4a','pd4b'),('pd4test','pd4test1','pd4test2'),('test','test1','test'),('test_a','test_a1','test_a2');
 UNLOCK TABLES;
+
+
+CREATE VIEW course_view AS
+SELECT * FROM course
+WHERE course_number > 300
+ORDER BY course_number;
+
+-- simple query #2
+CREATE VIEW office_hour_view AS
+SELECT * FROM office_hour
+WHERE meetup_date >= '2022-04-01'
+ORDER BY id_office_hour;
+
+-- AGGREGATE QUERY #1
+CREATE VIEW upper_name_view AS
+SELECT UPPER(full_name) from student
+WHERE is_ta = 'No';
+
+-- AGGREGATE QUERY #2
+CREATE VIEW number_of_tas_view AS
+SELECT COUNT(*) AS number_of_tas FROM student
+WHERE is_ta = 'Yes';
+
+-- COMPLEX QUERY #1
+CREATE VIEW inner_join_view AS
+select course_number from course
+INNER JOIN ta_list
+ON course.course_number = ta_list.ta_course_number;
+
+-- COMPLEX QUERY #2
+CREATE VIEW ta_view AS
+SELECT teaching_assistant from course
+WHERE course_number = (SELECT MIN(course_number) FROM office_hour);
